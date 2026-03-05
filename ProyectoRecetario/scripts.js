@@ -1,24 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     fetch("recetas.json")
         .then(respuesta => respuesta.json())
         .then(datos => {
             const contenedor = document.getElementById("contenedor-tarjetas");
-
+            
             let htmlAcumulado = "";
 
             datos.recetas.forEach(receta => {
-
+                
                 let ingredientesHTML = "";
                 receta.ingredientes.forEach(ing => {
-                    ingredientesHTML += <li>${ing}</li>;
+                    ingredientesHTML += `<li>${ing}</li>`;
                 });
 
-                htmlAcumulado +=
+                htmlAcumulado += `
                     <div class="tarjeta">
                         <div class="tarjeta-img">Img</div>
                         <h3>${receta.nombre}</h3>
                         <p>${receta.descripcion}</p>
-
+                        
                         <div class="tarjeta-ingredientes">
                             <strong>Ingredientes:</strong>
                             <ul>
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <button class="btn-fav">🤍</button>
                         </div>
                     </div>
-                    ;
+                `;
             });
 
             contenedor.innerHTML = htmlAcumulado;
