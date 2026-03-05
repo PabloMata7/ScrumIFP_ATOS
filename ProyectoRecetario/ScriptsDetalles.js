@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Rellenar título y descripción
             document.getElementById('titulo').textContent = receta.nombre;
             document.getElementById('receta-img').src = receta.imagen;
-            document.getElementById('receta-img').alt = receta.nombre;
+            document.getElementById('receta-img').src = receta.imagen.startsWith('http') ? receta.imagen : 'recursos/' + receta.imagen;
             document.getElementById('descripcion').textContent = receta.descripcion;
 
             // Rellenar ingredientes
