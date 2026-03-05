@@ -1,17 +1,15 @@
-/* === 1. VARIABLES GLOBALES (Configuración del "Motor de Render") === */
 :root {
-    --color-primario: #E07A5F;     /* Naranja terracota cálido para botones y acentos */
-    --color-secundario: #3D405B;   /* Azul oscuro/Grisáceo para textos fuertes y footer */
-    --color-fondo: #FDFBF7;        /* Blanco roto/crema para el fondo de la página */
-    --color-tarjeta: #FFFFFF;      /* Blanco puro para las tarjetas */
-    --color-texto: #4A4A4A;        /* Gris oscuro para el texto normal */
+    --color-primario: #E07A5F;     
+    --color-secundario: #3D405B;   
+    --color-fondo: #FDFBF7;        
+    --color-tarjeta: #FFFFFF;      
+    --color-texto: #4A4A4A;       
     
-    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra base (Eje Z) */
-    --sombra-fuerte: 0 12px 20px rgba(0, 0, 0, 0.1); /* Sombra para el hover */
-    --transicion: all 0.3s ease;   /* Interpolación (Lerp) para animaciones */
+    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    --sombra-fuerte: 0 12px 20px rgba(0, 0, 0, 0.1); 
+    --transicion: all 0.3s ease;   
 }
 
-/* === 2. RESETEO BÁSICO === */
 * { 
     margin: 0; 
     padding: 0; 
@@ -27,7 +25,6 @@ body {
     color: var(--color-texto);
 }
 
-/* === 3. HEADER Y NAVEGACIÓN === */
 header {
     display: flex;
     justify-content: space-between;
@@ -63,11 +60,9 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* === 4. CONTENIDO PRINCIPAL === */
 main { flex: 1; padding: 40px; max-width: 1400px; margin: 0 auto; width: 100%; }
 h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
 
-/* === 5. CARRUSEL === */
 .carrusel {
     display: flex;
     align-items: center;
@@ -80,17 +75,7 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
     border-radius: 16px; 
     box-shadow: var(--sombra-suave);
 }
-.carrusel-btn { 
-    cursor: pointer; 
-    font-size: 24px; 
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; 
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: white;
-    border: none; 
-    transition: var(--transicion);
-}
+
 .carrusel-contenido {
     flex: 1;
     text-align: center;
@@ -103,33 +88,42 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
     align-items: center;
 }
 
-/* Estilos para la imagenes mostradas*/
 #carrusel-display img {
-    width: 90%;          
-    height: 300px;        
-    object-fit: cover;    
+    width: 100%;          
+    height: 310px;        /* Fijamos la altura casi al total del contenedor padre */
+    object-fit: cover;    /* Evita que las fotos se aplasten o estiren */
+    border-radius: 12px;  /* Bordes redondeados elegantes */
     display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombreado para darle volumen */
     transition: opacity 0.3s ease; 
-
-    
 }
+
+.carrusel-btn { 
+    cursor: pointer; 
+    font-size: 24px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
+    border: none; 
+    transition: var(--transicion);
+}
+
 .carrusel-btn:hover { background-color: rgba(255, 255, 255, 0.4); transform: scale(1.1); }
 .carrusel-contenido { flex: 1; text-align: center; font-size: 28px; font-weight: bold; }
 
-/* === 6. SISTEMA DE GRID (TARJETAS) === */
 .contenedor-tarjetas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
 }
 
-/* Clases modificadoras para la vista de cuadrícula forzada */
 .contenedor-tarjetas.grid-4-columnas { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 1200px) { .contenedor-tarjetas.grid-4-columnas { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 900px) { .contenedor-tarjetas.grid-4-columnas { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .contenedor-tarjetas.grid-4-columnas { grid-template-columns: 1fr; } }
 
-/* === 7. DISEÑO DE LA TARJETA === */
 .tarjeta {
     background-color: var(--color-tarjeta);
     border-radius: 16px;
@@ -158,7 +152,6 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
     display: block;
 }
 
-/* Contenedor interno (Padding y jerarquía) */
 .tarjeta-contenido {
     padding: 20px;
     display: flex;
@@ -167,9 +160,13 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
 }
 
 .tarjeta-contenido h3 { font-size: 20px; margin-bottom: 8px; color: var(--color-secundario); }
-.tarjeta-contenido p { font-size: 14px; margin-bottom: 15px; flex: 1; line-height: 1.5; }
 
-/* FUSIÓN: Estilos específicos de la lista de ingredientes integrados aquí */
+.tarjeta-contenido p {
+    font-size: 14px; 
+    margin-bottom: 15px; 
+    line-height: 1.5; 
+}
+
 .tarjeta-contenido strong {
     font-size: 14px;
     color: var(--color-secundario);
@@ -178,7 +175,7 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
 }
 
 .tarjeta-contenido ul {
-    list-style-position: inside; /* Viñetas dentro del flujo del texto */
+    list-style-position: inside; 
     margin-left: 5px;
     margin-bottom: 20px;
 }
@@ -189,7 +186,6 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
     margin-bottom: 4px;
 }
 
-/* === 8. BOTONES === */
 .botones-tarjeta { 
     display: flex; 
     justify-content: space-between; 

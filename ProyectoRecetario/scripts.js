@@ -92,10 +92,10 @@ function renderizarTarjetas() {
 /* === 5. CARRUSEL Y EVENTOS === */
 function actualizarCarrusel() {
     const display = document.getElementById("carrusel-display");
-    if (!display) return; // Evita el crasheo en recetas.html
+    if (!display) return; 
    
-    // Inyectamos la imagen estática correspondiente al índice
-    display.innerHTML= `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">`;
+    // Solo inyectamos la estructura semántica. El CSS se encargará de las dimensiones.
+    display.innerHTML = `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta destacada">`;
 }
 
 // Botones del carrusel protegidos contra punteros nulos

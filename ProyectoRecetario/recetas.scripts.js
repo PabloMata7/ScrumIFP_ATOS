@@ -33,7 +33,8 @@ function renderizarTarjetas(recetas) {
     const contenedor = document.getElementById("contenedor-tarjetas");
 
     if (recetas.length === 0) {
-        contenedor.innerHTML = '<p>No se han encontrado recetas.</p>';
+        // Mensaje cuando el buscador no encuentra nada
+        contenedor.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; font-size: 18px; color: var(--color-secundario);">No se han encontrado recetas.</p>';
         return;
     }
 
@@ -47,16 +48,20 @@ function renderizarTarjetas(recetas) {
 
         htmlAcumulado += `
             <div class="tarjeta">
-                <div class="tarjeta-img">Img</div>
-                <h3>${receta.nombre}</h3>
-                <p>${receta.descripcion}</p>
-                <div class="tarjeta-ingredientes">
-                    <strong>Ingredientes:</strong>
-                    <ul>${ingredientesHTML}</ul>
+                <div class="tarjeta-img">
+                    <img src="recursos/${receta.imagen}" alt="${receta.nombre}" class="img-fluida">
                 </div>
-                <div class="botones-tarjeta">
-                    <button class="btn-ver-mas">Ver más</button>
-                    <button class="btn-fav">🤍</button>
+                <div class="tarjeta-contenido">
+                    <h3>${receta.nombre}</h3>
+                    <p>${receta.descripcion}</p>
+                    <div class="tarjeta-ingredientes">
+                        <strong>Ingredientes:</strong>
+                        <ul>${ingredientesHTML}</ul>
+                    </div>
+                    <div class="botones-tarjeta">
+                        <a href="Detalles.html?id=${receta.idReceta}" class="btn-ver-mas" style="text-decoration: none; text-align: center;">Ver más</a>
+                        <button class="btn-fav">🤍</button>
+                    </div>
                 </div>
             </div>
         `;
