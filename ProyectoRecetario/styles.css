@@ -8,9 +8,21 @@ header {
     align-items: center;
     padding: 15px 30px;
     border-bottom: 2px solid #ccc;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
 }
 nav { display: flex; gap: 20px; }
 nav a { text-decoration: none; color: #333; font-weight: bold; }
+.buscador {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    width: 200px;
+}
 
 main { flex: 1; padding: 20px 30px; }
 h1 { margin-bottom: 20px; font-weight: normal; }

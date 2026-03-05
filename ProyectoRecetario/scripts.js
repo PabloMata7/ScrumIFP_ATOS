@@ -1,49 +1,43 @@
-let db = null; 
-const USUARIO_ACTUAL = 1;
-let recetaDestacadaIndex = 0;
+let todasLasRecetas = [];
 
-fetch("recetas.json")
-    .then(respuesta => respuesta.json())
-    .then(datos => {
-        db = datos; 
-        
-        renderizarTarjetas();
-        actualizarCarrusel();
-    })
-    .catch(error => console.error("Error cargando el JSON:", error));
+document.addEventListener('DOMContentLoaded', function() {
+    fetch("recetas.json")
+        .then(respuesta => respuesta.json())
+        .then(datos => {
+            todasLasRecetas = datos.recetas;
+            renderizarTarjetas(todasLasRecetas);
+        })
+        .catch(error => {
+            console.error("Error crítico al cargar el JSON:", error);
+        });
 
-function esRecetaFavorita(idReceta) {
-    if (!db || !db.favoritos) return false; 
-    
-    return db.favoritos.some(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
-}
+    document.querySelector('.buscador').addEventListener('input', function() {
+        const termino = this.value.toLowerCase().trim();
 
-window.toggleFavorito = function(idReceta) {
-    if (!db) return; 
-    
-    const index = db.favoritos.findIndex(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
-    
-    if (index > -1) {
-        db.favoritos.splice(index, 1);
-    } else {
-        db.favoritos.push({ idUsuario: USUARIO_ACTUAL, idReceta: idReceta });
+        const filtradas = todasLasRecetas.filter(receta =>
+            receta.nombre.toLowerCase().includes(termino) ||
+            receta.descripcion.toLowerCase().includes(termino) ||
+            receta.ingredientes.some(ing => ing.toLowerCase().includes(termino))
+        );
+
+        renderizarTarjetas(filtradas);
+    });
+});
+
+function renderizarTarjetas(recetas) {
+    const contenedor = document.getElementById("contenedor-tarjetas");
+
+    if (recetas.length === 0) {
+        contenedor.innerHTML = '<p>No se han encontrado recetas.</p>';
+        return;
     }
-    
-    renderizarTarjetas();
-};
 
-function renderizarTarjetas() {
-    if (!db) return;
-    
-    const contenedor = document.getElementById("contenedor-tarjetas"); 
-    let htmlAcumulado = ""; 
+    let htmlAcumulado = "";
 
-    db.recetas.forEach(receta => {
-        const iconoCorazon = esRecetaFavorita(receta.idReceta) ? '❤️' : '🤍';
-        
-        let ingredientes = "";
+    recetas.forEach(receta => {
+        let ingredientesHTML = "";
         receta.ingredientes.forEach(ing => {
-            ingredientes += `<li>${ing}</li>`;
+            ingredientesHTML += `<li>${ing}</li>`;
         });
 
         htmlAcumulado += `
@@ -51,14 +45,13 @@ function renderizarTarjetas() {
                 <div class="tarjeta-img">Img</div>
                 <h3>${receta.nombre}</h3>
                 <p>${receta.descripcion}</p>
-                
-                <ul style="margin-left: 20px; margin-bottom: 15px; font-size: 12px; flex: 1;">
-                    ${ingredientes}
-                </ul>
-                
+                <div class="tarjeta-ingredientes">
+                    <strong>Ingredientes:</strong>
+                    <ul>${ingredientesHTML}</ul>
+                </div>
                 <div class="botones-tarjeta">
                     <button class="btn-ver-mas">Ver más</button>
-                    <button class="btn-fav" onclick="toggleFavorito(${receta.idReceta})">${iconoCorazon}</button>
+                    <button class="btn-fav">🤍</button>
                 </div>
             </div>
         `;
@@ -66,23 +59,3 @@ function renderizarTarjetas() {
 
     contenedor.innerHTML = htmlAcumulado;
 }
-
-function actualizarCarrusel() {
-    if (!db || db.recetas.length === 0) return; 
-    
-    const display = document.getElementById("carrusel-display");
-    const recetaActual = db.recetas[recetaDestacadaIndex];
-    display.innerText = `Foto de: ${recetaActual.nombre}`;
-}
-
-document.getElementById("btn-next").addEventListener("click", () => {
-    if (!db) return;
-    recetaDestacadaIndex = (recetaDestacadaIndex + 1) % db.recetas.length;
-    actualizarCarrusel();
-});
-
-document.getElementById("btn-prev").addEventListener("click", () => {
-    if (!db) return;
-    recetaDestacadaIndex = (recetaDestacadaIndex - 1 + db.recetas.length) % db.recetas.length;
-    actualizarCarrusel();
-});
