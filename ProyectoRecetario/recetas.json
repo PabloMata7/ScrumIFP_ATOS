@@ -17,6 +17,7 @@
       "idReceta": 1,
       "nombre": "Tortilla de Patatas",
       "descripcion": "Tortilla española clásica con patatas y cebolla.",
+      "imagen": "tortilla-patata.png",
       "ingredientes": [
         "4 huevos",
         "3 patatas medianas",
@@ -36,6 +37,7 @@
       "idReceta": 2,
       "nombre": "Gazpacho Andaluz",
       "descripcion": "Sopa fría de tomate y verduras frescas para el verano.",
+      "imagen": "Gazpacho.png",
       "ingredientes": [
         "1 kg tomates maduros",
         "1 pepino",
@@ -57,6 +59,7 @@
       "idReceta": 3,
       "nombre": "Paella Valenciana",
       "descripcion": "Arroz tradicional valenciano con pollo y verduras.",
+      "imagen": "paella-valenciana.png",
       "ingredientes": [
         "400g arroz",
         "1 pollo troceado",
@@ -80,6 +83,7 @@
       "idReceta": 4,
       "nombre": "Ensalada César",
       "descripcion": "Ensalada clásica con lechuga romana, pollo y aderezo césar.",
+      "imagen": "Ensalada-cesar.png",
       "ingredientes": [
         "1 lechuga romana",
         "1 pechuga de pollo",
@@ -101,6 +105,7 @@
       "idReceta": 5,
       "nombre": "Croquetas de Jamón",
       "descripcion": "Croquetas caseras cremosas con jamón serrano.",
+      "imagen": "croquetas.png",
       "ingredientes": [
         "200g jamón serrano",
         "1 litro de leche",
