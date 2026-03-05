@@ -3,12 +3,14 @@
     {
       "idUsuario": 1,
       "nombre": "Ana García",
-      "correo": "ana@gmail.com"
+      "correo": "ana@gmail.com",
+      "contraseña": "123456"
     },
     {
       "idUsuario": 2,
       "nombre": "Carlos López",
-      "correo": "carlos@gmail.com"
+      "correo": "carlos@gmail.com",
+      "contraseña": "123456"
     }
   ],
   "recetas": [

@@ -54,6 +54,7 @@ nav a:hover {
     color: var(--color-primario); 
 }
 
+
 .auth {
     font-weight: bold;
     color: var(--color-secundario);
@@ -250,4 +251,26 @@ footer {
 .footer-col span:hover { 
     opacity: 1; 
     color: var(--color-primario); 
+}
+header > a[href="login.html"] {
+    padding: 10px 24px;
+    background-color: var(--color-primario);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transicion);
+    box-shadow: 0 2px 8px rgba(224, 122, 95, 0.2);
+    display: inline-block;
+}
+
+header > a[href="login.html"]:hover {
+    background-color: #c96248;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
+}
+
+header > a[href="login.html"]:active {
+    transform: translateY(0);
 }
