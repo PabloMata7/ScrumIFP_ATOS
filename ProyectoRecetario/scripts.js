@@ -1,6 +1,16 @@
 let db = null; 
 const USUARIO_ACTUAL = 1;
+
+// Carrousel ----------------------------
 let recetaDestacadaIndex = 0;
+const imagenes = [
+    "recursos/tortilla-patata.png",
+    "recursos/paella-valenciana.png",
+    "recursos/Gazpacho.png",     
+    "recursos/croquetas.png",
+    "recursos/Ensalada-cesar.png" 
+];
+//-----------------------------------------
 
 fetch("recetas.json")
     .then(respuesta => respuesta.json())
@@ -67,22 +77,30 @@ function renderizarTarjetas() {
     contenedor.innerHTML = htmlAcumulado;
 }
 
+
+//lo hacemos sin bbdd 
 function actualizarCarrusel() {
-    if (!db || db.recetas.length === 0) return; 
+    //if (!db || db.recetas.length === 0) return; 
     
     const display = document.getElementById("carrusel-display");
-    const recetaActual = db.recetas[recetaDestacadaIndex];
-    display.innerText = `Foto de: ${recetaActual.nombre}`;
+
+   
+    //const recetaActual = db.recetas[recetaDestacadaIndex]
+    display.innerHTML= `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta">`;
 }
 
+//boton para ver siguiente
 document.getElementById("btn-next").addEventListener("click", () => {
-    if (!db) return;
-    recetaDestacadaIndex = (recetaDestacadaIndex + 1) % db.recetas.length;
+    //if (!db) return;
+    recetaDestacadaIndex = (recetaDestacadaIndex + 1) % imagenes.length;
     actualizarCarrusel();
 });
 
+//boton para ver anterior
 document.getElementById("btn-prev").addEventListener("click", () => {
-    if (!db) return;
-    recetaDestacadaIndex = (recetaDestacadaIndex - 1 + db.recetas.length) % db.recetas.length;
+    //if (!db) return;
+    recetaDestacadaIndex = (recetaDestacadaIndex - 1 + imagenes.length) % imagenes.length;
     actualizarCarrusel();
 });
+
+actualizarCarrusel(); //renderizamos el carrousel
