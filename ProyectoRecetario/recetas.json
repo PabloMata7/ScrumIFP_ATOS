@@ -11,7 +11,6 @@
       "correo": "carlos@gmail.com"
     }
   ],
-
   "recetas": [
     {
       "idReceta": 1,
@@ -124,7 +123,6 @@
       ]
     }
   ],
-
   "favoritos": [
     {
       "idUsuario": 1,

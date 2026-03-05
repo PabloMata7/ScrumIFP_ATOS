@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle receta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="ScriptsDetalles.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Recetario</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Recetas</a>
+            <a href="#">Mis favs.</a>
+        </nav>
+        <div class="auth">Iniciar sesión</div>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-link">Volver a recetas</a>
+
+        <div class="receta-hero">
+            <div class="receta-hero-img-wrap">
+                <img id="receta-img" src="" alt="">
+                <div class="img-placeholder" id="img-placeholder">Sin imagen</div>
+            </div>
+
+            <div class="receta-hero-info">
+                <span class="receta-tag">Receta</span>
+                <h1 id="titulo"></h1>
+                <div class="divider"></div>
+                <p id="descripcion"></p>
+            </div>
+        </div>
+
+        <div class="receta-body">
+            <aside class="ingredientes-card">
+                <p class="section-label">Ingredientes</p>
+                <ul id="ingredientes"></ul>
+            </aside>
+
+            <section class="pasos-section">
+                <p class="section-label">Preparación</p>
+                <ol id="pasos"></ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logo footer-logo">Recetario</div>
+        <div class="footer-col">
+            <strong>Inicio</strong>
+            <span>Link 1</span>
+            <span>Link 2</span>
+        </div>
+        <div class="footer-col">
+            <strong>Integrantes</strong>
+            <span>Persona 1</span>
+            <span>Persona 2</span>
+        </div>
+        <div class="footer-col">
+            <strong>Redes sociales</strong>
+            <span>[ Iconos ]</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

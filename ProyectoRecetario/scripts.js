@@ -1,7 +1,8 @@
+/* === 1. ESTADO GLOBAL (Memoria) === */
 let db = null; 
 const USUARIO_ACTUAL = 1;
 
-// Carrousel ----------------------------
+// Carrousel estático (Desde rama HEAD)
 let recetaDestacadaIndex = 0;
 const imagenes = [
     "recursos/tortilla-patata.png",
@@ -10,8 +11,8 @@ const imagenes = [
     "recursos/croquetas.png",
     "recursos/Ensalada-cesar.png" 
 ];
-//-----------------------------------------
 
+/* === 2. INICIALIZACIÓN (Red) === */
 fetch("recetas.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
@@ -21,11 +22,13 @@ fetch("recetas.json")
     })
     .catch(error => console.error("Error crítico cargando el JSON:", error));
 
+/* === 3. LÓGICA DE NEGOCIO === */
 function esRecetaFavorita(idReceta) {
     if (!db || !db.favoritos) return false; 
     return db.favoritos.some(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
 }
 
+// Función global para el botón de favoritos
 window.toggleFavorito = function(idReceta) {
     if (!db) return; 
     
@@ -40,22 +43,24 @@ window.toggleFavorito = function(idReceta) {
     renderizarTarjetas();
 };
 
+/* === 4. MOTOR DE RENDERIZADO VISUAL === */
 function renderizarTarjetas() {
     if (!db) return;
     
     const contenedor = document.getElementById("contenedor-tarjetas"); 
-    if (!contenedor) return; 
+    if (!contenedor) return; // Guarda de seguridad para la página que no lo tenga
 
     let htmlAcumulado = ""; 
 
     db.recetas.forEach(receta => {
         const iconoCorazon = esRecetaFavorita(receta.idReceta) ? '❤️' : '🤍';
         
-        let ingredientes = "";
+        let ingredientesHTML = "";
         receta.ingredientes.forEach(ing => {
-            ingredientes += `<li>${ing}</li>`;
+            ingredientesHTML += `<li>${ing}</li>`;
         });
 
+        // FUSIÓN: Estructura mejorada + Enlace Detalles.html (Desde rama origin/DJ)
         htmlAcumulado += `
             <div class="tarjeta">
                 <div class="tarjeta-img">
@@ -64,11 +69,16 @@ function renderizarTarjetas() {
                 <div class="tarjeta-contenido">
                     <h3>${receta.nombre}</h3>
                     <p>${receta.descripcion}</p>
-                    <ul>
-                        ${ingredientes}
-                    </ul>
+                    
+                    <div class="tarjeta-ingredientes">
+                        <strong>Ingredientes:</strong>
+                        <ul>
+                            ${ingredientesHTML}
+                        </ul>
+                    </div>
+                    
                     <div class="botones-tarjeta">
-                        <button class="btn-ver-mas">Ver más</button>
+                        <a href="Detalles.html?id=${receta.idReceta}" class="btn-ver-mas" style="text-decoration: none; text-align: center;">Ver más</a>
                         <button class="btn-fav" onclick="toggleFavorito(${receta.idReceta})">${iconoCorazon}</button>
                     </div>
                 </div>
@@ -79,30 +89,32 @@ function renderizarTarjetas() {
     contenedor.innerHTML = htmlAcumulado;
 }
 
-
-//lo hacemos sin bbdd 
+/* === 5. CARRUSEL Y EVENTOS === */
 function actualizarCarrusel() {
-    //if (!db || db.recetas.length === 0) return; 
-    
     const display = document.getElementById("carrusel-display");
+    if (!display) return; // Evita el crasheo en recetas.html
    
-    //const recetaActual = db.recetas[recetaDestacadaIndex]
-    display.innerHTML= `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta">`;
+    // Inyectamos la imagen estática correspondiente al índice
+    display.innerHTML= `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">`;
 }
 
-//boton para ver siguiente
-document.getElementById("btn-next").addEventListener("click", () => {
-    //if (!db) return;
-    recetaDestacadaIndex = (recetaDestacadaIndex + 1) % imagenes.length;
-    actualizarCarrusel();
-});
+// Botones del carrusel protegidos contra punteros nulos
+const btnNext = document.getElementById("btn-next");
+const btnPrev = document.getElementById("btn-prev");
 
-//boton para ver anterior
-document.getElementById("btn-prev").addEventListener("click", () => {
-    //if (!db) return;
-    recetaDestacadaIndex = (recetaDestacadaIndex - 1 + imagenes.length) % imagenes.length;
-    actualizarCarrusel();
-});
+if (btnNext) {
+    btnNext.addEventListener("click", () => {
+        recetaDestacadaIndex = (recetaDestacadaIndex + 1) % imagenes.length;
+        actualizarCarrusel();
+    });
+}
 
-actualizarCarrusel(); //renderizamos el carrousel
+if (btnPrev) {
+    btnPrev.addEventListener("click", () => {
+        recetaDestacadaIndex = (recetaDestacadaIndex - 1 + imagenes.length) % imagenes.length;
+        actualizarCarrusel();
+    });
+}
 
+// Renderizamos el carrusel inicial (antes del fetch, porque usa array local)
+actualizarCarrusel();
