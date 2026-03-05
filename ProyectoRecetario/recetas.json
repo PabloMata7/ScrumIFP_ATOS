@@ -1,16 +1,137 @@
-[
-  {
-    "id": 1,
-    "titulo": "Tortilla de Patatas",
-    "tiempo": "45 min",
-    "ingredientes": ["Patatas", "Huevos", "Cebolla", "Aceite", "Sal"],
-    "imagen": "tortilla.jpg"
-  },
-  {
-    "id": 2,
-    "titulo": "Espaguetis a la Carbonara",
-    "tiempo": "20 min",
-    "ingredientes": ["Espaguetis", "Guanciale", "Yemas de huevo", "Pecorino", "Pimienta"],
-    "imagen": "carbonara.jpg"
-  }
-]
+{
+  "usuarios": [
+    {
+      "idUsuario": 1,
+      "nombre": "Ana García",
+      "correo": "ana@gmail.com"
+    },
+    {
+      "idUsuario": 2,
+      "nombre": "Carlos López",
+      "correo": "carlos@gmail.com"
+    }
+  ],
+
+  "recetas": [
+    {
+      "idReceta": 1,
+      "nombre": "Tortilla de Patatas",
+      "descripcion": "Tortilla española clásica con patatas y cebolla.",
+      "ingredientes": [
+        "4 huevos",
+        "3 patatas medianas",
+        "1 cebolla",
+        "Aceite de oliva",
+        "Sal"
+      ],
+      "pasos": [
+        "Pelar y cortar las patatas en láminas finas.",
+        "Pochar las patatas y la cebolla en aceite a fuego medio.",
+        "Batir los huevos con sal y mezclar con las patatas escurridas.",
+        "Cuajar la tortilla en sartén antiadherente por ambos lados.",
+        "Dejar reposar 5 minutos antes de servir."
+      ]
+    },
+    {
+      "idReceta": 2,
+      "nombre": "Gazpacho Andaluz",
+      "descripcion": "Sopa fría de tomate y verduras frescas para el verano.",
+      "ingredientes": [
+        "1 kg tomates maduros",
+        "1 pepino",
+        "1 pimiento verde",
+        "1 diente de ajo",
+        "Pan del día anterior",
+        "Vinagre y aceite de oliva",
+        "Sal"
+      ],
+      "pasos": [
+        "Remojar el pan en agua fría 10 minutos.",
+        "Triturar todos los ingredientes en batidora.",
+        "Colar por un colador fino para textura suave.",
+        "Sazonar con sal, vinagre y aceite al gusto.",
+        "Enfriar en nevera al menos 2 horas."
+      ]
+    },
+    {
+      "idReceta": 3,
+      "nombre": "Paella Valenciana",
+      "descripcion": "Arroz tradicional valenciano con pollo y verduras.",
+      "ingredientes": [
+        "400g arroz",
+        "1 pollo troceado",
+        "Judías verdes",
+        "Garrofón",
+        "Tomate triturado",
+        "Pimentón dulce",
+        "Azafrán",
+        "Aceite de oliva",
+        "Sal"
+      ],
+      "pasos": [
+        "Sofreír el pollo en aceite hasta dorar.",
+        "Añadir las verduras y rehogar 5 minutos.",
+        "Incorporar el tomate y el pimentón.",
+        "Añadir el caldo caliente con azafrán.",
+        "Repartir el arroz y cocer 18 minutos sin remover."
+      ]
+    },
+    {
+      "idReceta": 4,
+      "nombre": "Ensalada César",
+      "descripcion": "Ensalada clásica con lechuga romana, pollo y aderezo césar.",
+      "ingredientes": [
+        "1 lechuga romana",
+        "1 pechuga de pollo",
+        "Pan para picatostes",
+        "Queso parmesano",
+        "Salsa césar",
+        "Aceite de oliva",
+        "Sal y pimienta"
+      ],
+      "pasos": [
+        "Cortar y tostar el pan en cubos con aceite.",
+        "Cocinar el pollo a la plancha y cortar en tiras.",
+        "Lavar y trocear la lechuga romana.",
+        "Mezclar la lechuga con la salsa césar.",
+        "Añadir pollo, picatostes y parmesano por encima."
+      ]
+    },
+    {
+      "idReceta": 5,
+      "nombre": "Croquetas de Jamón",
+      "descripcion": "Croquetas caseras cremosas con jamón serrano.",
+      "ingredientes": [
+        "200g jamón serrano",
+        "1 litro de leche",
+        "100g harina",
+        "80g mantequilla",
+        "Pan rallado",
+        "2 huevos",
+        "Sal, pimienta y nuez moscada"
+      ],
+      "pasos": [
+        "Hacer un roux con la mantequilla y la harina.",
+        "Añadir la leche poco a poco sin dejar de remover.",
+        "Incorporar el jamón picado y salpimentar.",
+        "Dejar enfriar la masa en nevera 2 horas.",
+        "Formar las croquetas, rebozar y freír en aceite caliente."
+      ]
+    }
+  ],
+
+  "favoritos": [
+    {
+      "idUsuario": 1,
+      "idReceta": 1
+    },
+    {
+      "idUsuario": 1,
+      "idReceta": 3
+    },
+    {
+      "idUsuario": 2,
+      "idReceta": 2
+    }
+  ]
+}
