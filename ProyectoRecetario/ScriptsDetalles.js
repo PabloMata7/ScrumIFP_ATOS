@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Obtener el ID de la receta de la URL
     const params = new URLSearchParams(window.location.search);
     const idReceta = params.get('id');
@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Rellenar título y descripción
             document.getElementById('titulo').textContent = receta.nombre;
+            document.getElementById('receta-img').src = receta.imagen;
+            document.getElementById('receta-img').alt = receta.nombre;
             document.getElementById('descripcion').textContent = receta.descripcion;
 
             // Rellenar ingredientes
