@@ -4,39 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle recetas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Detalle receta</title>
+    <link rel="stylesheet" href="Detalles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <script src="ScriptsDetalles.js" defer></script>
 </head>
 
 <body>
 
     <header>
-        <div class="logo">Logo Nombre</div>
+        <div class="logo">Recetario</div>
         <nav>
             <a href="index.html">Home</a>
             <a href="#">Recetas</a>
             <a href="#">Mis favs.</a>
         </nav>
-        <div class="auth">Iniciar sesión / Register</div>
+        <div class="auth">Iniciar sesión</div>
     </header>
 
     <main>
-        <h1 id="titulo"></h1>
+        <a href="index.html" class="back-link">Volver a recetas</a>
 
-        <img id="receta-img" src="" alt="" style="width: 100%; max-width: 500px; margin: 20px 0;">
-        <p id="descripcion"></p>
+        <div class="receta-hero">
+            <div class="receta-hero-img-wrap">
+                <img id="receta-img" src="" alt="">
+                <div class="img-placeholder" id="img-placeholder">Sin imagen</div>
+            </div>
 
-        <h3>Ingredientes</h3>
-        <ul id="ingredientes"></ul>
+            <div class="receta-hero-info">
+                <span class="receta-tag">Receta</span>
+                <h1 id="titulo"></h1>
+                <div class="divider"></div>
+                <p id="descripcion"></p>
+            </div>
+        </div>
 
-        <h3>Pasos</h3>
-        <ol id="pasos"></ol>
+        <div class="receta-body">
+            <aside class="ingredientes-card">
+                <p class="section-label">Ingredientes</p>
+                <ul id="ingredientes"></ul>
+            </aside>
 
+            <section class="pasos-section">
+                <p class="section-label">Preparación</p>
+                <ol id="pasos"></ol>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <div class="logo" style="font-size: 24px; font-style: italic;">Logo</div>
+        <div class="logo footer-logo">Recetario</div>
         <div class="footer-col">
             <strong>Inicio</strong>
             <span>Link 1</span>
@@ -52,3 +71,7 @@
             <span>[ Iconos ]</span>
         </div>
     </footer>
+
+</body>
+
+</html>
