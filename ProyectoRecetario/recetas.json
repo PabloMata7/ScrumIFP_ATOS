@@ -660,6 +660,30 @@
         "Añadir los garbanzos y el majado del mortero.",
         "Añadir un chorrito de vinagre y cocer 5 minutos."
       ]
+    },
+    {
+      "idReceta": 31,
+      "nombre": "Carbonara Romana Auténtica",
+      "descripcion": "La verdadera carbonara romana: solo guanciale, pecorino, yemas y pimienta negra. Sin nata, sin cebolla, sin ajo. La receta que se hace en Roma desde los años 50.",
+      "imagen": "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=800",
+      "ingredientes": [
+        "400g spaghetti o rigatoni",
+        "200g guanciale (carrillera de cerdo curada, NO panceta)",
+        "6 yemas de huevo + 1 huevo entero",
+        "100g Pecorino Romano DOP rallado fino",
+        "50g Parmigiano Reggiano rallado (opcional, para suavizar)",
+        "Pimienta negra entera recién molida (abundante)",
+        "Sal gruesa para el agua de cocción"
+      ],
+      "pasos": [
+        "Cortar el guanciale en dados o tiras de 1cm. Sin aceite, pochar a fuego medio-bajo en sartén hasta que esté dorado y crujiente por fuera pero jugoso por dentro. Reservar la grasa que suelta.",
+        "Mezclar en un bol las yemas con el huevo entero, el Pecorino rallado fino, pimienta negra muy abundante y una cucharada de la grasa del guanciale. La mezcla debe quedar espesa como una crema.",
+        "Cocer la pasta en agua con abundante sal. Reservar al menos 2 vasos del agua de cocción antes de escurrir.",
+        "Escurrir la pasta cuando esté al dente y añadirla directamente a la sartén del guanciale. Fuego apagado o muy bajo.",
+        "Esperar 1 minuto a que la pasta temple un poco. Añadir la mezcla de huevo y queso removiendo rápido con movimientos envolventes.",
+        "Añadir agua de cocción cucharada a cucharada (el almidón es clave) mientras se remueve hasta conseguir una salsa cremosa y sedosa que nape la pasta. No debe quedar ni líquida ni cuajada.",
+        "Servir inmediatamente con más Pecorino rallado y pimienta negra recién molida por encima."
+      ]
     }
   ],
   "favoritos": [

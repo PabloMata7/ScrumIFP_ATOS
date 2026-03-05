@@ -64,7 +64,7 @@ function renderizarTarjetas() {
         htmlAcumulado += `
             <div class="tarjeta">
                 <div class="tarjeta-img">
-                    <img src="recursos/${receta.imagen}" alt="${receta.nombre}" class="img-fluida">
+                    <img src="${receta.imagen.startsWith('http') ? receta.imagen : 'recursos/' + receta.imagen}" alt="${receta.nombre}" class="img-fluida">
                 </div>
                 <div class="tarjeta-contenido">
                     <h3>${receta.nombre}</h3>
