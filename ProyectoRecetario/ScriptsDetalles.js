@@ -1,31 +1,38 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener el ID de la receta de la URL
+    const params = new URLSearchParams(window.location.search);
+    const idReceta = params.get('id');
 
-    const parametros = new URLSearchParams(window.location.search);
-    const id = parametros.get("id");
+    if (!idReceta) {
+        document.getElementById('titulo').innerHTML = 'Error: No se especificó una receta.';
+        return;
+    }
 
     fetch("recetas.json")
-        .then(res => res.json())
+        .then(respuesta => respuesta.json())
         .then(datos => {
+            // Buscar la receta con el ID
+            const receta = datos.recetas.find(r => r.idReceta === parseInt(idReceta));
 
-            const receta = datos.recetas.find(r => r.idReceta == id);
+            if (!receta) {
+                document.getElementById('titulo').innerHTML = 'Error: Receta no encontrada.';
+                return;
+            }
 
-            document.getElementById("titulo").textContent = receta.nombre;
-            document.getElementById("descripcion").textContent = receta.descripcion;
+            // Rellenar título y descripción
+            document.getElementById('titulo').textContent = receta.nombre;
+            document.getElementById('descripcion').textContent = receta.descripcion;
 
-            const listaIngredientes = document.getElementById("ingredientes");
-            receta.ingredientes.forEach(ing => {
-                const li = document.createElement("li");
-                li.textContent = ing;
-                listaIngredientes.appendChild(li);
-            });
+            // Rellenar ingredientes
+            let ingredientesHTML = receta.ingredientes.map(ing => `<li>${ing}</li>`).join('');
+            document.getElementById('ingredientes').innerHTML = ingredientesHTML;
 
-            const listaPasos = document.getElementById("pasos");
-            receta.pasos.forEach(paso => {
-                const li = document.createElement("li");
-                li.textContent = paso;
-                listaPasos.appendChild(li);
-            });
-
+            // Rellenar pasos
+            let pasosHTML = receta.pasos.map(paso => `<li>${paso}</li>`).join('');
+            document.getElementById('pasos').innerHTML = pasosHTML;
+        })
+        .catch(error => {
+            console.error("Error al cargar la receta:", error);
+            document.getElementById('titulo').innerHTML = 'Error al cargar los datos.';
         });
-
 });

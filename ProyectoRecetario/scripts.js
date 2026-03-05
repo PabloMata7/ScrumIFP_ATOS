@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
 
                         <div class="botones-tarjeta">
-                            <button class="btn-ver-mas">Ver más</button>
+                            <a href="Detalles.html?id=${receta.idReceta}" class="btn-ver-mas">Ver más</a>
                             <button class="btn-fav">🤍</button>
                         </div>
                     </div>
