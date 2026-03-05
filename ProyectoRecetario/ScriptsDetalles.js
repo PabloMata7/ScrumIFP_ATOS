@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('ingredientes').innerHTML = ingredientesHTML;
 
             // Rellenar pasos
-            let pasosHTML = receta.pasos.map(paso => `<li>${paso}</li>`).join('');
+            let pasosHTML = receta.pasos.map((paso, index) => `<li data-number="${index + 1}">${paso}</li>`).join('');
             document.getElementById('pasos').innerHTML = pasosHTML;
         })
         .catch(error => {
