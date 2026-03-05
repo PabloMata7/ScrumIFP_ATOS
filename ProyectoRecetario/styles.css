@@ -29,12 +29,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background-color: var(--color-tarjeta);
-    box-shadow: var(--sombra-suave);
-    position: sticky; 
+    padding: 15px 30px;
+    border-bottom: 2px solid #ccc;
+    position: sticky;
     top: 0;
-    z-index: 100; 
+    background-color: white;
+    z-index: 100;
 }
 
 .logo {
@@ -63,6 +63,27 @@ nav a {
 nav a:hover {
     color: var(--color-primario); 
 }
+nav a .nav-icon {
+    display: none;
+    margin-right: 4px;
+}
+
+nav a:hover .nav-icon {
+    display: inline;
+}
+.buscador {
+    padding: 8px 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    width: 220px;
+    transition: border 0.2s;
+}
+
+.buscador:focus {
+    border-color: #e76f51;
+}
 
 .auth {
     font-weight: bold;
@@ -77,7 +98,7 @@ h1 { margin-bottom: 30px; color: var(--color-secundario); font-size: 32px; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, var(--color-secundario), #2b2d42);
+    background-color: #fde8df;
     color: white;
     height: 350px;
     margin-bottom: 40px;
