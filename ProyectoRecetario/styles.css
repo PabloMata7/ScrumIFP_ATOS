@@ -138,14 +138,10 @@ h1 {
 #carrusel-display img {
     width: 100%;
     height: 310px;
-    /* Fijamos la altura casi al total del contenedor padre */
     object-fit: cover;
-    /* Evita que las fotos se aplasten o estiren */
     border-radius: 12px;
-    /* Bordes redondeados elegantes */
     display: block;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Sombreado para darle volumen */
     transition: opacity 0.3s ease;
 }
 
@@ -291,13 +287,11 @@ h1 {
     background-color: #c96248;
 }
 
-/* FUSIÓN: Botón de favoritos unificado */
 .btn-fav {
     cursor: pointer;
     border: none;
     background: none;
     font-size: 24px;
-    /* Priorizamos el tamaño grande para mejor UX móvil */
     transition: var(--transicion);
 }
 
@@ -305,8 +299,6 @@ h1 {
     transform: scale(1.2);
 }
 
-/* === 9. FOOTER === */
-/* FUSIÓN: Footer unificado sin duplicidades ni bloques @@ de Git */
 footer {
     display: flex;
     justify-content: space-around;

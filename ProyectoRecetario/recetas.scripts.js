@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => console.error("Error al cargar el JSON:", error));
 
-    // Lógica del Input de Búsqueda
     document.querySelector('.buscador').addEventListener('input', function() {
         const termino = this.value.toLowerCase().trim();
 
@@ -57,7 +56,6 @@ window.toggleFavorito = function(idReceta) {
     
     localStorage.setItem('db_favoritos', JSON.stringify(favoritos));
     
-    // Repintamos SOLO las tarjetas que estaban filtradas por la búsqueda
     renderizarTarjetas(recetasVisibles); 
 };
 
@@ -71,7 +69,6 @@ function renderizarTarjetas(recetas) {
 
     let htmlAcumulado = "";
     recetas.forEach(receta => {
-        // Consultamos el estado local para pintar el corazón
         const iconoCorazon = esRecetaFavorita(receta.idReceta) ? '❤️' : '🤍';
         
         let ingredientesHTML = "";

@@ -1,8 +1,6 @@
-/* === 1. ESTADO GLOBAL (Memoria) === */
 let db = null; 
 const USUARIO_ACTUAL = AuthService.obtenerUsuarioActual();
 
-// Carrousel estático (Desde rama HEAD)
 let recetaDestacadaIndex = 0;
 const imagenes = [
     "recursos/tortilla-patata.png",
@@ -12,7 +10,6 @@ const imagenes = [
     "recursos/Ensalada-cesar.png" 
 ];
 
-/* === 2. INICIALIZACIÓN (Red) === */
 fetch("recetas.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
@@ -27,7 +24,6 @@ fetch("recetas.json")
     })
     .catch(error => console.error("Error crítico cargando el JSON:", error));
 
-/* === 3. LÓGICA DE NEGOCIO === */
 function esRecetaFavorita(idReceta) {
     if (!USUARIO_ACTUAL) return false; 
     const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
@@ -49,14 +45,11 @@ window.toggleFavorito = function(idReceta) {
         favoritos.push({ idUsuario: USUARIO_ACTUAL.idUsuario, idReceta: idReceta }); 
     }
     
-    // Escritura a disco (I/O)
     localStorage.setItem('db_favoritos', JSON.stringify(favoritos));
     
-    // Repintamos la interfaz
     renderizarTarjetas();
 };
 
-/* === 4. MOTOR DE RENDERIZADO VISUAL === */
 function renderizarTarjetas() {
     if (!db) return;
     
@@ -103,16 +96,13 @@ function renderizarTarjetas() {
     contenedor.innerHTML = htmlAcumulado;
 }
 
-/* === 5. CARRUSEL Y EVENTOS === */
 function actualizarCarrusel() {
     const display = document.getElementById("carrusel-display");
     if (!display) return; 
    
-    // Solo inyectamos la estructura semántica. El CSS se encargará de las dimensiones.
     display.innerHTML = `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta destacada">`;
 }
 
-// Botones del carrusel protegidos contra punteros nulos
 const btnNext = document.getElementById("btn-next");
 const btnPrev = document.getElementById("btn-prev");
 
@@ -130,5 +120,4 @@ if (btnPrev) {
     });
 }
 
-// Renderizamos el carrusel inicial (antes del fetch, porque usa array local)
 actualizarCarrusel();
