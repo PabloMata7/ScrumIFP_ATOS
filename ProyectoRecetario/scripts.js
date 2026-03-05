@@ -1,6 +1,6 @@
 /* === 1. ESTADO GLOBAL (Memoria) === */
 let db = null; 
-const USUARIO_ACTUAL = 1;
+const USUARIO_ACTUAL = AuthService.obtenerUsuarioActual();
 
 // Carrousel estático (Desde rama HEAD)
 let recetaDestacadaIndex = 0;

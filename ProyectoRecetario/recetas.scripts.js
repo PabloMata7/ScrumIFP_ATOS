@@ -1,4 +1,5 @@
 let todasLasRecetas = [];
+const USUARIO_ACTUAL = AuthService.obtenerUsuarioActual();
 
 document.addEventListener('DOMContentLoaded', function() {
     fetch("recetas.json")
