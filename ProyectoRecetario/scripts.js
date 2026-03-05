@@ -1,6 +1,6 @@
 /* === 1. ESTADO GLOBAL (Memoria) === */
 let db = null; 
-const USUARIO_ACTUAL = 1;
+const USUARIO_ACTUAL = AuthService.obtenerUsuarioActual();
 
 // Carrousel estático (Desde rama HEAD)
 let recetaDestacadaIndex = 0;
@@ -17,6 +17,11 @@ fetch("recetas.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
         db = datos; 
+
+        if (!localStorage.getItem('db_favoritos')) {
+            localStorage.setItem('db_favoritos', JSON.stringify(datos.favoritos));
+        }
+
         renderizarTarjetas();
         actualizarCarrusel();
     })
@@ -24,22 +29,30 @@ fetch("recetas.json")
 
 /* === 3. LÓGICA DE NEGOCIO === */
 function esRecetaFavorita(idReceta) {
-    if (!db || !db.favoritos) return false; 
-    return db.favoritos.some(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
+    if (!USUARIO_ACTUAL) return false; 
+    const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
+    return favoritos.some(fav => fav.idUsuario === USUARIO_ACTUAL.idUsuario && fav.idReceta === idReceta);
 }
 
-// Función global para el botón de favoritos
 window.toggleFavorito = function(idReceta) {
-    if (!db) return; 
-    
-    const index = db.favoritos.findIndex(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
-    
-    if (index > -1) {
-        db.favoritos.splice(index, 1);
-    } else {
-        db.favoritos.push({ idUsuario: USUARIO_ACTUAL, idReceta: idReceta });
+    if (!USUARIO_ACTUAL) {
+        alert("Debes iniciar sesión para poder guardar recetas en favoritos.");
+        return; 
     }
     
+    const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
+    const index = favoritos.findIndex(fav => fav.idUsuario === USUARIO_ACTUAL.idUsuario && fav.idReceta === idReceta);
+    
+    if (index > -1) {
+        favoritos.splice(index, 1); 
+    } else {
+        favoritos.push({ idUsuario: USUARIO_ACTUAL.idUsuario, idReceta: idReceta }); 
+    }
+    
+    // Escritura a disco (I/O)
+    localStorage.setItem('db_favoritos', JSON.stringify(favoritos));
+    
+    // Repintamos la interfaz
     renderizarTarjetas();
 };
 
@@ -48,11 +61,13 @@ function renderizarTarjetas() {
     if (!db) return;
     
     const contenedor = document.getElementById("contenedor-tarjetas"); 
-    if (!contenedor) return; // Guarda de seguridad para la página que no lo tenga
+    if (!contenedor) return; 
 
     let htmlAcumulado = ""; 
 
-    db.recetas.forEach(receta => {
+    const recetasPreview = db.recetas.slice(0, 4);
+
+    recetasPreview.forEach(receta => {
         const iconoCorazon = esRecetaFavorita(receta.idReceta) ? '❤️' : '🤍';
         
         let ingredientesHTML = "";
@@ -60,7 +75,6 @@ function renderizarTarjetas() {
             ingredientesHTML += `<li>${ing}</li>`;
         });
 
-        // FUSIÓN: Estructura mejorada + Enlace Detalles.html (Desde rama origin/DJ)
         htmlAcumulado += `
             <div class="tarjeta">
                 <div class="tarjeta-img">
