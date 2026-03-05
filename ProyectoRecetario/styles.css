@@ -1,0 +1,86 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+body { display: flex; flex-direction: column; min-height: 100vh; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 2px solid #ccc;
+}
+nav { display: flex; gap: 20px; }
+nav a { text-decoration: none; color: #333; font-weight: bold; }
+
+main { flex: 1; padding: 20px 30px; }
+h1 { margin-bottom: 20px; font-weight: normal; }
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    height: 300px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.carrusel-btn { cursor: pointer; font-size: 24px; padding: 10px; background: none; border: none; }
+.carrusel-contenido { flex: 1; text-align: center; font-size: 24px; color: #666; font-style: italic; }
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    border: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.tarjeta-img {
+    width: 100%;
+    height: 120px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: #999;
+}
+.tarjeta h3 { font-size: 16px; margin-bottom: 5px; }
+.tarjeta p { font-size: 12px; color: #666; margin-bottom: 15px; flex: 1; }
+.botones-tarjeta { display: flex; justify-content: space-between; align-items: center; }
+.btn-ver-mas { padding: 5px 10px; border: 1px solid #333; background: none; cursor: pointer; }
+.btn-fav { cursor: pointer; border: none; background: none; font-size: 18px; }
+
+.tarjeta-ingredientes {
+    flex: 1;
+    margin-bottom: 15px;
+}
+.tarjeta-ingredientes strong {
+    font-size: 13px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+.tarjeta-ingredientes ul {
+    list-style-position: inside;
+    margin-left: 5px;
+}
+.tarjeta-ingredientes li {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-top: 2px solid #ccc;
+    margin-top: auto;
+}
+.footer-col { display: flex; flex-direction: column; gap: 5px; font-size: 14px; }

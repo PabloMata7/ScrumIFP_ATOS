@@ -1,27 +1,41 @@
 fetch("recetas.json")
-.then(respuesta => respuesta.json())
-.then(datos => {
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        const contenedor = document.getElementById("contenedor-tarjetas");
+        
+        let htmlAcumulado = "";
 
-    const contenedor = document.getElementById("contenedor-recetas");
+        datos.recetas.forEach(receta => {
+            
+            let ingredientesHTML = "";
+            receta.ingredientes.forEach(ing => {
+                ingredientesHTML += `<li>${ing}</li>`;
+            });
 
-    datos.recetas.forEach(receta => {
+            htmlAcumulado += `
+                <div class="tarjeta">
+                    <div class="tarjeta-img">Img</div>
+                    <h3>${receta.nombre}</h3>
+                    <p>${receta.descripcion}</p>
+                    
+                    <div class="tarjeta-ingredientes">
+                        <strong>Ingredientes:</strong>
+                        <ul>
+                            ${ingredientesHTML}
+                        </ul>
+                    </div>
 
-        let ingredientes = "";
-
-        receta.ingredientes.forEach(ing => {
-            ingredientes += `<li>${ing}</li>`;
+                    <div class="botones-tarjeta">
+                        <button class="btn-ver-mas">Ver más</button>
+                        <button class="btn-fav">🤍</button>
+                    </div>
+                </div>
+            `;
         });
 
-        let htmlReceta = `
-            <div>
-                <h2>${receta.nombre}</h2>
-                <p>${receta.descripcion}</p>
-                <ul>${ingredientes}</ul>
-            </div>
-        `;
+        contenedor.innerHTML = htmlAcumulado;
 
-        contenedor.innerHTML += htmlReceta;
-
+    })
+    .catch(error => {
+        console.error("Error crítico al cargar el JSON:", error);
     });
-
-});
