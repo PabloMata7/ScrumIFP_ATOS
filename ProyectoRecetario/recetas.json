@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tortilla de Patatas",
+    "tiempo": "45 min",
+    "ingredientes": ["Patatas", "Huevos", "Cebolla", "Aceite", "Sal"],
+    "imagen": "tortilla.jpg"
+  },
+  {
+    "id": 2,
+    "titulo": "Espaguetis a la Carbonara",
+    "tiempo": "20 min",
+    "ingredientes": ["Espaguetis", "Guanciale", "Yemas de huevo", "Pecorino", "Pimienta"],
+    "imagen": "carbonara.jpg"
+  }
+]
