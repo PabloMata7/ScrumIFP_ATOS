@@ -121,6 +121,545 @@
         "Dejar enfriar la masa en nevera 2 horas.",
         "Formar las croquetas, rebozar y freír en aceite caliente."
       ]
+    },
+    {
+      "idReceta": 6,
+      "nombre": "Patatas Bravas",
+      "descripcion": "Patatas fritas crujientes con salsa brava picante, tapa clásica española.",
+      "imagen": "https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=800",
+      "ingredientes": [
+        "4 patatas grandes",
+        "Aceite de oliva",
+        "Sal",
+        "Para la salsa: 1 tomate, 1 guindilla, pimentón picante, ajo, vinagre"
+      ],
+      "pasos": [
+        "Pelar y cortar las patatas en cubos irregulares.",
+        "Freír las patatas en aceite caliente hasta dorar.",
+        "Sofreír el ajo y la guindilla para la salsa.",
+        "Añadir el tomate y el pimentón, triturar.",
+        "Servir las patatas con la salsa brava por encima."
+      ]
+    },
+    {
+      "idReceta": 7,
+      "nombre": "Pulpo a la Gallega",
+      "descripcion": "Pulpo cocido con pimentón, aceite de oliva y sal gruesa sobre patatas.",
+      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "ingredientes": [
+        "1 pulpo de 1,5 kg",
+        "3 patatas medianas",
+        "Pimentón dulce y picante",
+        "Aceite de oliva virgen extra",
+        "Sal gruesa"
+      ],
+      "pasos": [
+        "Congelar el pulpo 48 horas para ablandarlo.",
+        "Cocer el pulpo en agua hirviendo 45 minutos.",
+        "Cocer las patatas en el mismo agua del pulpo.",
+        "Cortar el pulpo en rodajas con tijeras.",
+        "Servir sobre las patatas con pimentón, sal y aceite."
+      ]
+    },
+    {
+      "idReceta": 8,
+      "nombre": "Cocido Madrileño",
+      "descripcion": "Guiso tradicional de garbanzos con carnes y verduras de Madrid.",
+      "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "ingredientes": [
+        "400g garbanzos",
+        "1 trozo de tocino",
+        "1 hueso de jamón",
+        "2 chorizos",
+        "1 morcilla",
+        "1 pollo troceado",
+        "2 zanahorias",
+        "2 patatas",
+        "Repollo",
+        "Sal"
+      ],
+      "pasos": [
+        "Remojar los garbanzos en agua la noche anterior.",
+        "Cocer las carnes en agua fría durante 30 minutos.",
+        "Añadir los garbanzos y las verduras.",
+        "Cocer todo a fuego lento 2 horas.",
+        "Servir en vuelcos: sopa, garbanzos y carnes separados."
+      ]
+    },
+    {
+      "idReceta": 9,
+      "nombre": "Salmorejo Cordobés",
+      "descripcion": "Crema fría de tomate espesa, más densa que el gazpacho, típica de Córdoba.",
+      "imagen": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800",
+      "ingredientes": [
+        "1 kg tomates maduros",
+        "200g pan duro",
+        "1 diente de ajo",
+        "100ml aceite de oliva virgen extra",
+        "Sal",
+        "Huevo cocido y jamón para decorar"
+      ],
+      "pasos": [
+        "Remojar el pan en agua 10 minutos.",
+        "Triturar tomates, pan escurrido, ajo y sal.",
+        "Añadir el aceite en hilo mientras se sigue triturando.",
+        "Colar si se desea textura muy fina.",
+        "Enfriar y servir con huevo picado y jamón."
+      ]
+    },
+    {
+      "idReceta": 10,
+      "nombre": "Gambas al Ajillo",
+      "descripcion": "Gambas salteadas con ajo y guindilla en aceite de oliva, tapa imprescindible.",
+      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "ingredientes": [
+        "400g gambas peladas",
+        "6 dientes de ajo",
+        "2 guindillas",
+        "Aceite de oliva",
+        "Sal",
+        "Perejil fresco"
+      ],
+      "pasos": [
+        "Calentar abundante aceite en cazuela de barro.",
+        "Añadir el ajo laminado y la guindilla.",
+        "Cuando el ajo empiece a dorar, añadir las gambas.",
+        "Saltear 2-3 minutos hasta que cambien de color.",
+        "Espolvorear perejil y servir inmediatamente."
+      ]
+    },
+    {
+      "idReceta": 11,
+      "nombre": "Lentejas Estofadas",
+      "descripcion": "Lentejas guisadas con chorizo, verduras y especias al estilo tradicional.",
+      "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800",
+      "ingredientes": [
+        "400g lentejas pardinas",
+        "1 chorizo",
+        "1 cebolla",
+        "2 zanahorias",
+        "2 patatas",
+        "1 hoja de laurel",
+        "Pimentón",
+        "Aceite de oliva",
+        "Sal"
+      ],
+      "pasos": [
+        "Sofreír la cebolla y la zanahoria picadas.",
+        "Añadir el chorizo en rodajas y rehogar.",
+        "Incorporar las lentejas lavadas y cubrir con agua.",
+        "Añadir las patatas, laurel y pimentón.",
+        "Cocer 35-40 minutos a fuego medio."
+      ]
+    },
+    {
+      "idReceta": 12,
+      "nombre": "Pisto Manchego",
+      "descripcion": "Fritada de verduras de La Mancha, similar al ratatouille francés.",
+      "imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+      "ingredientes": [
+        "2 calabacines",
+        "2 pimientos rojos",
+        "1 pimiento verde",
+        "1 cebolla",
+        "4 tomates maduros",
+        "Aceite de oliva",
+        "Sal y azúcar"
+      ],
+      "pasos": [
+        "Pochar la cebolla y los pimientos en aceite.",
+        "Añadir el calabacín troceado y rehogar 10 minutos.",
+        "Incorporar el tomate rallado y el azúcar.",
+        "Cocer a fuego lento 30 minutos removiendo ocasionalmente.",
+        "Rectificar de sal y servir caliente o frío."
+      ]
+    },
+    {
+      "idReceta": 13,
+      "nombre": "Fabada Asturiana",
+      "descripcion": "Guiso contundente de fabes con compango asturiano, plato emblemático del norte.",
+      "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800",
+      "ingredientes": [
+        "500g fabes asturianas",
+        "2 chorizos asturianos",
+        "2 morcillas asturianas",
+        "200g tocino",
+        "1 hueso de jamón",
+        "Azafrán",
+        "Sal"
+      ],
+      "pasos": [
+        "Remojar las fabes en agua fría la noche anterior.",
+        "Colocar todos los ingredientes en olla con agua fría.",
+        "Llevar a ebullición y espumar.",
+        "Cocer a fuego muy lento 2-3 horas.",
+        "Asustar las fabes con agua fría a mitad de cocción."
+      ]
+    },
+    {
+      "idReceta": 14,
+      "nombre": "Churros con Chocolate",
+      "descripcion": "Churros crujientes fritos acompañados de chocolate espeso para mojar.",
+      "imagen": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800",
+      "ingredientes": [
+        "250g harina",
+        "250ml agua hirviendo",
+        "1 pizca de sal",
+        "Aceite para freír",
+        "Para el chocolate: 200g chocolate, 500ml leche, 2 cucharadas maicena"
+      ],
+      "pasos": [
+        "Mezclar la harina con el agua hirviendo y la sal.",
+        "Llenar la churrera con la masa.",
+        "Freír los churros en aceite caliente hasta dorar.",
+        "Disolver la maicena en leche fría y calentar con el chocolate.",
+        "Remover el chocolate hasta espesar y servir caliente."
+      ]
+    },
+    {
+      "idReceta": 15,
+      "nombre": "Pollo al Ajillo",
+      "descripcion": "Pollo dorado con ajo, vino blanco y hierbas aromáticas, receta tradicional.",
+      "imagen": "https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=800",
+      "ingredientes": [
+        "1 pollo troceado",
+        "8 dientes de ajo",
+        "150ml vino blanco",
+        "Romero y tomillo",
+        "Aceite de oliva",
+        "Sal y pimienta"
+      ],
+      "pasos": [
+        "Salpimentar los trozos de pollo.",
+        "Dorar el pollo en aceite caliente por todos lados.",
+        "Añadir los ajos enteros y las hierbas.",
+        "Incorporar el vino blanco y dejar reducir.",
+        "Cocer tapado 25 minutos a fuego medio-bajo."
+      ]
+    },
+    {
+      "idReceta": 16,
+      "nombre": "Crema de Verduras",
+      "descripcion": "Crema suave y nutritiva de verduras de temporada, perfecta como primer plato.",
+      "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "ingredientes": [
+        "2 calabacines",
+        "2 zanahorias",
+        "1 puerro",
+        "1 patata",
+        "Caldo de verduras",
+        "Nata para cocinar",
+        "Aceite de oliva",
+        "Sal y pimienta"
+      ],
+      "pasos": [
+        "Rehogar el puerro en aceite hasta transparente.",
+        "Añadir el resto de verduras troceadas.",
+        "Cubrir con caldo y cocer 20 minutos.",
+        "Triturar con batidora hasta obtener crema suave.",
+        "Añadir nata, rectificar sal y servir caliente."
+      ]
+    },
+    {
+      "idReceta": 17,
+      "nombre": "Merluza en Salsa Verde",
+      "descripcion": "Merluza cocinada en salsa de perejil y ajo con almejas, receta vasca.",
+      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800",
+      "ingredientes": [
+        "4 lomos de merluza",
+        "200g almejas",
+        "4 dientes de ajo",
+        "Perejil fresco abundante",
+        "150ml caldo de pescado",
+        "Harina",
+        "Aceite de oliva",
+        "Sal"
+      ],
+      "pasos": [
+        "Enharinar los lomos de merluza ligeramente.",
+        "Dorar el ajo en aceite y añadir la merluza.",
+        "Añadir el caldo de pescado y las almejas.",
+        "Mover la cazuela en círculos para ligar la salsa.",
+        "Espolvorear perejil picado y servir."
+      ]
+    },
+    {
+      "idReceta": 18,
+      "nombre": "Albóndigas en Salsa de Tomate",
+      "descripcion": "Albóndigas caseras jugosas guisadas en salsa de tomate casera.",
+      "imagen": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800",
+      "ingredientes": [
+        "500g carne picada mixta",
+        "1 huevo",
+        "Pan rallado",
+        "Ajo y perejil",
+        "Para la salsa: 800g tomate triturado, cebolla, ajo, laurel"
+      ],
+      "pasos": [
+        "Mezclar la carne con huevo, pan rallado, ajo y perejil.",
+        "Formar las albóndigas y enharinar.",
+        "Freír ligeramente las albóndigas.",
+        "Preparar la salsa sofriendo cebolla, ajo y tomate.",
+        "Guisar las albóndigas en la salsa 20 minutos."
+      ]
+    },
+    {
+      "idReceta": 19,
+      "nombre": "Arroz con Leche",
+      "descripcion": "Postre tradicional cremoso de arroz cocido en leche con canela y limón.",
+      "imagen": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800",
+      "ingredientes": [
+        "200g arroz redondo",
+        "1 litro de leche entera",
+        "150g azúcar",
+        "1 palo de canela",
+        "Piel de limón",
+        "Canela molida para decorar"
+      ],
+      "pasos": [
+        "Calentar la leche con la canela en rama y la piel de limón.",
+        "Añadir el arroz y cocer a fuego lento removiendo.",
+        "Cocer unos 35-40 minutos hasta que el arroz absorba la leche.",
+        "Añadir el azúcar al final de la cocción.",
+        "Servir frío con canela molida por encima."
+      ]
+    },
+    {
+      "idReceta": 20,
+      "nombre": "Flan de Huevo",
+      "descripcion": "Flan clásico casero de huevo con caramelo, postre tradicional español.",
+      "imagen": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800",
+      "ingredientes": [
+        "4 huevos",
+        "500ml leche entera",
+        "100g azúcar",
+        "Esencia de vainilla",
+        "Para el caramelo: 100g azúcar, 2 cucharadas agua"
+      ],
+      "pasos": [
+        "Hacer el caramelo con azúcar y agua en un cazo.",
+        "Verter el caramelo en los moldes.",
+        "Batir huevos con azúcar, leche y vainilla.",
+        "Colar la mezcla y verter sobre el caramelo.",
+        "Cocer al baño María en horno a 170°C durante 45 minutos."
+      ]
+    },
+    {
+      "idReceta": 21,
+      "nombre": "Tarta de Santiago",
+      "descripcion": "Tarta tradicional gallega de almendra con la cruz de Santiago característica.",
+      "imagen": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+      "ingredientes": [
+        "250g almendra molida",
+        "250g azúcar",
+        "4 huevos",
+        "Ralladura de limón",
+        "Canela molida",
+        "Azúcar glass para decorar"
+      ],
+      "pasos": [
+        "Batir los huevos con el azúcar hasta blanquear.",
+        "Añadir la almendra molida, limón y canela.",
+        "Verter en molde engrasado y enharinado.",
+        "Hornear a 180°C durante 25-30 minutos.",
+        "Decorar con azúcar glass y la plantilla de la cruz."
+      ]
+    },
+    {
+      "idReceta": 22,
+      "nombre": "Sopa de Ajo",
+      "descripcion": "Sopa castellana contundente con ajo, pan, pimentón y huevo escalfado.",
+      "imagen": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=800",
+      "ingredientes": [
+        "6 dientes de ajo",
+        "200g pan del día anterior",
+        "Pimentón dulce",
+        "4 huevos",
+        "Caldo de pollo",
+        "Aceite de oliva",
+        "Sal"
+      ],
+      "pasos": [
+        "Freír el ajo laminado en aceite hasta dorar.",
+        "Añadir el pimentón y el pan cortado en rebanadas.",
+        "Verter el caldo caliente y cocer 10 minutos.",
+        "Cascar los huevos encima y tapar.",
+        "Servir cuando los huevos estén escalfados."
+      ]
+    },
+    {
+      "idReceta": 23,
+      "nombre": "Berberechos al Vapor",
+      "descripcion": "Berberechos frescos abiertos al vapor con limón y perejil, aperitivo marinero.",
+      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "ingredientes": [
+        "1 kg berberechos",
+        "1 vaso de vino blanco",
+        "2 dientes de ajo",
+        "Perejil fresco",
+        "Zumo de limón",
+        "Aceite de oliva"
+      ],
+      "pasos": [
+        "Dejar los berberechos en agua con sal 1 hora para purgarlos.",
+        "Sofreír el ajo en aceite en cazuela.",
+        "Añadir los berberechos y el vino blanco.",
+        "Tapar y cocer hasta que se abran todos.",
+        "Espolvorear perejil y zumo de limón antes de servir."
+      ]
+    },
+    {
+      "idReceta": 24,
+      "nombre": "Escalivada",
+      "descripcion": "Verduras asadas al horno o brasa: berenjena y pimiento, plato catalán.",
+      "imagen": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800",
+      "ingredientes": [
+        "2 berenjenas",
+        "3 pimientos rojos",
+        "2 cebollas",
+        "Aceite de oliva virgen extra",
+        "Sal",
+        "Ajo opcional"
+      ],
+      "pasos": [
+        "Untar las verduras enteras con aceite.",
+        "Asar en horno a 200°C durante 45-60 minutos.",
+        "Dejar enfriar dentro de una bolsa para pelar mejor.",
+        "Pelar las verduras y retirar las semillas.",
+        "Cortar en tiras, aliñar con aceite y sal."
+      ]
+    },
+    {
+      "idReceta": 25,
+      "nombre": "Pincho de Tortilla",
+      "descripcion": "Mini pincho de tortilla sobre pan, clásico de los bares españoles.",
+      "imagen": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800",
+      "ingredientes": [
+        "4 huevos",
+        "2 patatas medianas",
+        "1/2 cebolla",
+        "Barra de pan",
+        "Aceite de oliva",
+        "Sal",
+        "Palillos"
+      ],
+      "pasos": [
+        "Preparar la tortilla clásica con patatas y cebolla.",
+        "Dejar que quede jugosa por dentro.",
+        "Cortar la barra en rebanadas.",
+        "Cortar la tortilla en trozos del tamaño del pan.",
+        "Colocar la tortilla sobre el pan y clavar el palillo."
+      ]
+    },
+    {
+      "idReceta": 26,
+      "nombre": "Bacalao al Pil-Pil",
+      "descripcion": "Bacalao confitado en aceite y ajo con la característica salsa emulsionada vasca.",
+      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800",
+      "ingredientes": [
+        "4 lomos de bacalao desalado",
+        "300ml aceite de oliva",
+        "6 dientes de ajo",
+        "1 guindilla",
+        "Sal"
+      ],
+      "pasos": [
+        "Confitar los ajos en aceite a fuego muy bajo.",
+        "Retirar los ajos y añadir el bacalao con la piel hacia arriba.",
+        "Cocer a fuego muy lento 15 minutos.",
+        "Retirar el bacalao y ligar la salsa moviendo la cazuela.",
+        "Servir el bacalao con la salsa pil-pil encima."
+      ]
+    },
+    {
+      "idReceta": 27,
+      "nombre": "Migas Manchegas",
+      "descripcion": "Plato tradicional de La Mancha con pan desmigado, chorizo y pimientos.",
+      "imagen": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+      "ingredientes": [
+        "500g pan del día anterior",
+        "2 chorizos",
+        "4 lonchas de panceta",
+        "2 pimientos verdes",
+        "4 dientes de ajo",
+        "Aceite de oliva",
+        "Sal",
+        "Agua"
+      ],
+      "pasos": [
+        "Desmigar el pan y humedecer ligeramente con agua salada.",
+        "Freír el ajo, panceta y chorizo en aceite.",
+        "Añadir los pimientos y rehogar.",
+        "Incorporar el pan desmigado poco a poco.",
+        "Remover continuamente hasta que las migas estén sueltas y doradas."
+      ]
+    },
+    {
+      "idReceta": 28,
+      "nombre": "Buñuelos de Viento",
+      "descripcion": "Buñuelos huecos y esponjosos rebozados en azúcar, dulce típico de festividades.",
+      "imagen": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800",
+      "ingredientes": [
+        "250ml agua",
+        "100g mantequilla",
+        "150g harina",
+        "4 huevos",
+        "1 pizca de sal",
+        "Aceite para freír",
+        "Azúcar y canela para rebozar"
+      ],
+      "pasos": [
+        "Hervir el agua con la mantequilla y la sal.",
+        "Añadir la harina de golpe y remover hasta masa homogénea.",
+        "Dejar templar e incorporar los huevos uno a uno.",
+        "Freír cucharaditas de masa en aceite caliente.",
+        "Rebozar en azúcar con canela y servir calientes."
+      ]
+    },
+    {
+      "idReceta": 29,
+      "nombre": "Ensaladilla Rusa",
+      "descripcion": "Ensaladilla clásica con patata, zanahoria, atún y mayonesa casera.",
+      "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+      "ingredientes": [
+        "4 patatas",
+        "2 zanahorias",
+        "2 latas de atún",
+        "100g aceitunas",
+        "Pepinillos en vinagre",
+        "Mayonesa",
+        "Sal"
+      ],
+      "pasos": [
+        "Cocer las patatas y zanahorias con piel en agua con sal.",
+        "Pelar y cortar en daditos una vez frías.",
+        "Escurrir el atún y desmenuzar.",
+        "Mezclar todo con mayonesa generosa.",
+        "Enfriar en nevera y decorar con aceitunas y pimiento."
+      ]
+    },
+    {
+      "idReceta": 30,
+      "nombre": "Espinacas con Garbanzos",
+      "descripcion": "Plato sevillano de garbanzos con espinacas en salsa especiada con comino.",
+      "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+      "ingredientes": [
+        "400g garbanzos cocidos",
+        "400g espinacas frescas",
+        "3 dientes de ajo",
+        "1 rebanada de pan frito",
+        "Comino",
+        "Pimentón",
+        "Vinagre de jerez",
+        "Aceite de oliva"
+      ],
+      "pasos": [
+        "Sofreír el ajo laminado y el pan en aceite.",
+        "Machacar en mortero con comino y pimentón.",
+        "Saltear las espinacas en el mismo aceite.",
+        "Añadir los garbanzos y el majado del mortero.",
+        "Añadir un chorrito de vinagre y cocer 5 minutos."
+      ]
     }
   ],
   "favoritos": [
