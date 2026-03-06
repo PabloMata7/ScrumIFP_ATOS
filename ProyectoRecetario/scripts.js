@@ -1,8 +1,6 @@
-/* === 1. ESTADO GLOBAL (Memoria) === */
 let db = null; 
-const USUARIO_ACTUAL = 1;
+const USUARIO_ACTUAL = AuthService.obtenerUsuarioActual();
 
-// Carrousel estático (Desde rama HEAD)
 let recetaDestacadaIndex = 0;
 const imagenes = [
     "recursos/tortilla-patata.png",
@@ -12,47 +10,57 @@ const imagenes = [
     "recursos/Ensalada-cesar.png" 
 ];
 
-/* === 2. INICIALIZACIÓN (Red) === */
 fetch("recetas.json")
     .then(respuesta => respuesta.json())
     .then(datos => {
         db = datos; 
+
+        if (!localStorage.getItem('db_favoritos')) {
+            localStorage.setItem('db_favoritos', JSON.stringify(datos.favoritos));
+        }
+
         renderizarTarjetas();
         actualizarCarrusel();
     })
     .catch(error => console.error("Error crítico cargando el JSON:", error));
 
-/* === 3. LÓGICA DE NEGOCIO === */
 function esRecetaFavorita(idReceta) {
-    if (!db || !db.favoritos) return false; 
-    return db.favoritos.some(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
+    if (!USUARIO_ACTUAL) return false; 
+    const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
+    return favoritos.some(fav => fav.idUsuario === USUARIO_ACTUAL.idUsuario && fav.idReceta === idReceta);
 }
 
-// Función global para el botón de favoritos
 window.toggleFavorito = function(idReceta) {
-    if (!db) return; 
+    if (!USUARIO_ACTUAL) {
+        alert("Debes iniciar sesión para poder guardar recetas en favoritos.");
+        return; 
+    }
     
-    const index = db.favoritos.findIndex(fav => fav.idUsuario === USUARIO_ACTUAL && fav.idReceta === idReceta);
+    const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
+    const index = favoritos.findIndex(fav => fav.idUsuario === USUARIO_ACTUAL.idUsuario && fav.idReceta === idReceta);
     
     if (index > -1) {
-        db.favoritos.splice(index, 1);
+        favoritos.splice(index, 1); 
     } else {
-        db.favoritos.push({ idUsuario: USUARIO_ACTUAL, idReceta: idReceta });
+        favoritos.push({ idUsuario: USUARIO_ACTUAL.idUsuario, idReceta: idReceta }); 
     }
+    
+    localStorage.setItem('db_favoritos', JSON.stringify(favoritos));
     
     renderizarTarjetas();
 };
 
-/* === 4. MOTOR DE RENDERIZADO VISUAL === */
 function renderizarTarjetas() {
     if (!db) return;
     
     const contenedor = document.getElementById("contenedor-tarjetas"); 
-    if (!contenedor) return; // Guarda de seguridad para la página que no lo tenga
+    if (!contenedor) return; 
 
     let htmlAcumulado = ""; 
 
-    db.recetas.forEach(receta => {
+    const recetasPreview = db.recetas.slice(0, 4);
+
+    recetasPreview.forEach(receta => {
         const iconoCorazon = esRecetaFavorita(receta.idReceta) ? '❤️' : '🤍';
         
         let ingredientesHTML = "";
@@ -60,7 +68,6 @@ function renderizarTarjetas() {
             ingredientesHTML += `<li>${ing}</li>`;
         });
 
-        // FUSIÓN: Estructura mejorada + Enlace Detalles.html (Desde rama origin/DJ)
         htmlAcumulado += `
             <div class="tarjeta">
                 <div class="tarjeta-img">
@@ -89,16 +96,13 @@ function renderizarTarjetas() {
     contenedor.innerHTML = htmlAcumulado;
 }
 
-/* === 5. CARRUSEL Y EVENTOS === */
 function actualizarCarrusel() {
     const display = document.getElementById("carrusel-display");
     if (!display) return; 
    
-    // Solo inyectamos la estructura semántica. El CSS se encargará de las dimensiones.
     display.innerHTML = `<img src="${imagenes[recetaDestacadaIndex]}" alt="Receta destacada">`;
 }
 
-// Botones del carrusel protegidos contra punteros nulos
 const btnNext = document.getElementById("btn-next");
 const btnPrev = document.getElementById("btn-prev");
 
@@ -116,5 +120,4 @@ if (btnPrev) {
     });
 }
 
-// Renderizamos el carrusel inicial (antes del fetch, porque usa array local)
 actualizarCarrusel();
