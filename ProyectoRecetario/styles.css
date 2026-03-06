@@ -8,6 +8,9 @@
     --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.05);
     --sombra-fuerte: 0 12px 20px rgba(0, 0, 0, 0.1);
     --transicion: all 0.3s ease;
+
+    --estilo-fuente1: 'Playfair Display', Georgia, serif;
+    --estilo-fuente2:'Lato', sans-serif;
 }
 
 * {
@@ -172,13 +175,15 @@ h1 {
     height: 50px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: var(--color-primario);
     border: none;
     transition: var(--transicion);
+    display: block;
+    margin:10px;
 }
 
 .carrusel-btn:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: var(--color-fondo);
     transform: scale(1.1);
 }
 
@@ -295,12 +300,14 @@ h1 {
 .btn-ver-mas {
     padding: 8px 16px;
     background-color: var(--color-primario);
+    font-family: var(--estilo-fuente1);
     color: white;
     border: none;
     border-radius: 8px;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
     transition: var(--transicion);
+    
 }
 
 .btn-ver-mas:hover {
@@ -338,12 +345,15 @@ footer {
     gap: 10px;
     font-size: 14px;
     justify-content: center;
+    font-family: var(--estilo-fuente1);
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .footer-col a {
     color: var(--color-primario);
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .footer-col strong {
@@ -374,12 +384,15 @@ footer {
     flex-direction: column;
     gap: 10px;
     font-size: 14px;
+    font-family: var(--estilo-fuente1);
 }
 
 .footer-integrantes strong {
     color: var(--color-primario);
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .footer-integrantes span {
