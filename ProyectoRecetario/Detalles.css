@@ -24,7 +24,7 @@ body {
     font-family: var(--font-body);
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
 }
 
 /*
@@ -253,7 +253,7 @@ h1 {
 
 .receta-tag {
     display: inline-block;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -302,7 +302,7 @@ h1 {
 }
 
 .section-label {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -349,7 +349,7 @@ h1 {
 }
 
 #pasos li {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.75;
     color: var(--ink);
     font-weight: 300;
