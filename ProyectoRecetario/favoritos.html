@@ -21,16 +21,18 @@
             <a href="recetas.html"><span class="nav-icon">📖</span><span class="nav-texto">Recetas</span></a>
             <a href="favoritos.html"><span class="nav-icon">❤️</span><span class="nav-texto">Mis favoritos</span></a>
         </nav>
-        <div class="auth">
-            </div>
+        <div id="usuario-info" style="display: flex; align-items: center; gap: 15px;">
+            <span id="nombre-usuario"></span>
+            <button id="btn-logout">Salir</button>
+        </div>
+        <a href="login.html" id="btn-login">Iniciar sesión</a>
     </header>
 
     <main>
         <div class="favoritos-header">
             <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
                 <h1>❤️ Mis Favoritos</h1>
-                 <button class="btn-añadir" onclick="abrirModal()" style="margin-left: 50px;">+ Añadir receta</button>
-</div>
+                <button class="btn-añadir" onclick="abrirModal()" style="margin-left: 50px;">+ Añadir receta</button>
             </div>
             <p class="favoritos-subtitulo">Aquí están todas las recetas que has guardado</p>
         </div>
@@ -59,7 +61,7 @@
                 </a>
             </div>
         </div>
-        
+
         <section class="contenedor-tarjetas grid-4-columnas" id="contenedor-favoritos">
         </section>
     </main>
