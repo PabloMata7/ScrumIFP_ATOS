@@ -21,25 +21,42 @@
             <a href="recetas.html"><span class="nav-icon">📖</span><span class="nav-texto">Recetas</span></a>
             <a href="favoritos.html"><span class="nav-icon">❤️</span><span class="nav-texto">Mis favoritos</span></a>
         </nav>
-        <a href="login.html" id="btn-login">Iniciar sesión</a>
-        <div id="usuario-info" style="display: none; display: flex; align-items: center; gap: 15px;">
-            <span id="nombre-usuario" style="color: var(--color-secundario); font-weight: 600;"></span>
-            <button id="btn-logout" style="padding: 8px 16px; background-color: var(--color-primario); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">Salir</button>
-        </div>
+        <div class="auth">
+            </div>
     </header>
 
     <main>
         <div class="favoritos-header">
-            <h1>❤️ Mis Favoritos</h1>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                <h1>❤️ Mis Favoritos</h1>
+                 <button class="btn-añadir" onclick="abrirModal()" style="margin-left: 50px;">+ Añadir receta</button>
+</div>
+            </div>
             <p class="favoritos-subtitulo">Aquí están todas las recetas que has guardado</p>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal-overlay oculto" id="modal-añadir">
+            <div class="modal-contenido">
+                <button class="btn-cerrar" onclick="cerrarModal()">✕</button>
+                <h2>Añadir receta</h2>
+                <input type="text" id="input-nombre" placeholder="Nombre de la receta" />
+                <input type="text" id="input-imagen" placeholder="URL de la imagen" />
+                <textarea id="input-descripcion" placeholder="Descripción"></textarea>
+                <textarea id="input-ingredientes" placeholder="Ingredientes (uno por línea)"></textarea>
+                <textarea id="input-pasos" placeholder="Pasos (uno por línea)"></textarea>
+                <button class="btn-guardar" onclick="guardarReceta()">Guardar receta</button>
+            </div>
         </div>
 
         <div id="sin-favoritos" class="sin-favoritos-container" style="display: none;">
             <div class="sin-favoritos-content">
-                <span style="font-size: 60px; margin-bottom: 20px;">😢</span>
-                <h2>No tienes recetas favoritas</h2>
-                <p>Explora nuestro catálogo y guarda tus recetas favoritas para tenerlas todas en un mismo lugar.</p>
-                <a href="recetas.html" class="btn-explorar">Explorar recetas</a>
+                <span class="emoji-sin-favoritos">😢</span>
+                <h2>No tienes recetas favoritas aún</h2>
+                <p>Explora nuestro catálogo de recetas y guarda tus favoritas para tenerlas todas en un mismo lugar.</p>
+                <a href="recetas.html" class="btn-explorar">
+                    <span style="margin-right: 8px;">📖</span>Explorar recetas
+                </a>
             </div>
         </div>
         
