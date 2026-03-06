@@ -366,7 +366,7 @@
       "idReceta": 17,
       "nombre": "Merluza en Salsa Verde",
       "descripcion": "Merluza cocinada en salsa de perejil y ajo con almejas, receta vasca.",
-      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800",
+      "imagen": "merluza-salsa-verde.jpg",
       "ingredientes": [
         "4 lomos de merluza",
         "200g almejas",
@@ -389,7 +389,7 @@
       "idReceta": 18,
       "nombre": "Albóndigas en Salsa de Tomate",
       "descripcion": "Albóndigas caseras jugosas guisadas en salsa de tomate casera.",
-      "imagen": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800",
+      "imagen": "Albondigas-en-salsa.jpg",
       "ingredientes": [
         "500g carne picada mixta",
         "1 huevo",
@@ -409,7 +409,7 @@
       "idReceta": 19,
       "nombre": "Arroz con Leche",
       "descripcion": "Postre tradicional cremoso de arroz cocido en leche con canela y limón.",
-      "imagen": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800",
+      "imagen": "arroz-con-leche.jpg",
       "ingredientes": [
         "200g arroz redondo",
         "1 litro de leche entera",
@@ -430,7 +430,7 @@
       "idReceta": 20,
       "nombre": "Flan de Huevo",
       "descripcion": "Flan clásico casero de huevo con caramelo, postre tradicional español.",
-      "imagen": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800",
+      "imagen": "flan-huevo.jpg",
       "ingredientes": [
         "4 huevos",
         "500ml leche entera",
@@ -450,7 +450,7 @@
       "idReceta": 21,
       "nombre": "Tarta de Santiago",
       "descripcion": "Tarta tradicional gallega de almendra con la cruz de Santiago característica.",
-      "imagen": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+      "imagen": "tarta-de-santiago.jpg",
       "ingredientes": [
         "250g almendra molida",
         "250g azúcar",
