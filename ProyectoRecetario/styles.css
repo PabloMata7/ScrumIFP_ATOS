@@ -319,6 +319,8 @@ h1 {
     transform: scale(1.2);
 }
 
+
+/*estilos footer*/
 footer {
     display: flex;
     justify-content: space-around;
@@ -328,11 +330,14 @@ footer {
     margin-top: 60px;
 }
 
+/*footer rutas*/
+
 .footer-col {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 14px;
+    justify-content: center;
 }
 
 .footer-col a {
@@ -357,6 +362,38 @@ footer {
     opacity: 1;
     color: var(--color-primario);
 }
+
+.footer-col a:hover{
+    color:white;
+    transition: var(--transicion)
+}
+/*footer integrantes*/
+
+.footer-integrantes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.footer-integrantes strong {
+    color: var(--color-primario);
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.footer-integrantes span {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.footer-integrantes span:hover {
+    opacity: 1;
+    color: var(--color-primario);
+}
+
+/*footer sociales*/
 
 .footer-sociales {
     display: flex;
@@ -385,4 +422,9 @@ footer {
 .footer-sociales i:hover {
     background-color: #a64d36;
     cursor: pointer;
+}
+
+/*logo footer*/
+.logo-icon-footer{
+    font-size: 150px;
 }
