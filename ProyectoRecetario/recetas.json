@@ -128,7 +128,7 @@
       "idReceta": 6,
       "nombre": "Patatas Bravas",
       "descripcion": "Patatas fritas crujientes con salsa brava picante, tapa clásica española.",
-      "imagen": "https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=800",
+      "imagen": "patatasbravas.jpg",
       "ingredientes": [
         "4 patatas grandes",
         "Aceite de oliva",
@@ -147,7 +147,7 @@
       "idReceta": 7,
       "nombre": "Pulpo a la Gallega",
       "descripcion": "Pulpo cocido con pimentón, aceite de oliva y sal gruesa sobre patatas.",
-      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "imagen": "pulpogallega.jpg",
       "ingredientes": [
         "1 pulpo de 1,5 kg",
         "3 patatas medianas",
@@ -167,7 +167,7 @@
       "idReceta": 8,
       "nombre": "Cocido Madrileño",
       "descripcion": "Guiso tradicional de garbanzos con carnes y verduras de Madrid.",
-      "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "imagen": "cocidomadrileño.jpg",
       "ingredientes": [
         "400g garbanzos",
         "1 trozo de tocino",
@@ -192,7 +192,7 @@
       "idReceta": 9,
       "nombre": "Salmorejo Cordobés",
       "descripcion": "Crema fría de tomate espesa, más densa que el gazpacho, típica de Córdoba.",
-      "imagen": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800",
+      "imagen": "salmorejocordobes.jpg",
       "ingredientes": [
         "1 kg tomates maduros",
         "200g pan duro",
@@ -213,7 +213,7 @@
       "idReceta": 10,
       "nombre": "Gambas al Ajillo",
       "descripcion": "Gambas salteadas con ajo y guindilla en aceite de oliva, tapa imprescindible.",
-      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "imagen": "gambasalajillo.jpg",
       "ingredientes": [
         "400g gambas peladas",
         "6 dientes de ajo",
@@ -234,7 +234,7 @@
       "idReceta": 11,
       "nombre": "Lentejas Estofadas",
       "descripcion": "Lentejas guisadas con chorizo, verduras y especias al estilo tradicional.",
-      "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800",
+      "imagen": "lentejas.jpg",
       "ingredientes": [
         "400g lentejas pardinas",
         "1 chorizo",
@@ -258,7 +258,7 @@
       "idReceta": 12,
       "nombre": "Pisto Manchego",
       "descripcion": "Fritada de verduras de La Mancha, similar al ratatouille francés.",
-      "imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+      "imagen": "pisto-manchego-receta-tradicional-de-la-abuela.jpg",
       "ingredientes": [
         "2 calabacines",
         "2 pimientos rojos",
@@ -280,7 +280,7 @@
       "idReceta": 13,
       "nombre": "Fabada Asturiana",
       "descripcion": "Guiso contundente de fabes con compango asturiano, plato emblemático del norte.",
-      "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800",
+      "imagen": "fabada_asturiana.jpeg",
       "ingredientes": [
         "500g fabes asturianas",
         "2 chorizos asturianos",
@@ -302,7 +302,7 @@
       "idReceta": 14,
       "nombre": "Churros con Chocolate",
       "descripcion": "Churros crujientes fritos acompañados de chocolate espeso para mojar.",
-      "imagen": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800",
+      "imagen": "churros_chocolate.webp",
       "ingredientes": [
         "250g harina",
         "250ml agua hirviendo",
@@ -322,7 +322,7 @@
       "idReceta": 15,
       "nombre": "Pollo al Ajillo",
       "descripcion": "Pollo dorado con ajo, vino blanco y hierbas aromáticas, receta tradicional.",
-      "imagen": "https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=800",
+      "imagen": "pollo_al_ajillo.jpg",
       "ingredientes": [
         "1 pollo troceado",
         "8 dientes de ajo",
@@ -343,7 +343,7 @@
       "idReceta": 16,
       "nombre": "Crema de Verduras",
       "descripcion": "Crema suave y nutritiva de verduras de temporada, perfecta como primer plato.",
-      "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "imagen": "Qué-crema-de-verduras-es-la-más-saludable.webp",
       "ingredientes": [
         "2 calabacines",
         "2 zanahorias",
@@ -366,7 +366,7 @@
       "idReceta": 17,
       "nombre": "Merluza en Salsa Verde",
       "descripcion": "Merluza cocinada en salsa de perejil y ajo con almejas, receta vasca.",
-      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800",
+      "imagen": "merluza-salsa-verde.jpg",
       "ingredientes": [
         "4 lomos de merluza",
         "200g almejas",
@@ -389,7 +389,7 @@
       "idReceta": 18,
       "nombre": "Albóndigas en Salsa de Tomate",
       "descripcion": "Albóndigas caseras jugosas guisadas en salsa de tomate casera.",
-      "imagen": "https://images.unsplash.com/photo-1529042410759-befb1204b468?w=800",
+      "imagen": "Albondigas-en-salsa.jpg",
       "ingredientes": [
         "500g carne picada mixta",
         "1 huevo",
@@ -409,7 +409,7 @@
       "idReceta": 19,
       "nombre": "Arroz con Leche",
       "descripcion": "Postre tradicional cremoso de arroz cocido en leche con canela y limón.",
-      "imagen": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800",
+      "imagen": "arroz-con-leche.jpg",
       "ingredientes": [
         "200g arroz redondo",
         "1 litro de leche entera",
@@ -430,7 +430,7 @@
       "idReceta": 20,
       "nombre": "Flan de Huevo",
       "descripcion": "Flan clásico casero de huevo con caramelo, postre tradicional español.",
-      "imagen": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800",
+      "imagen": "flan-huevo.jpg",
       "ingredientes": [
         "4 huevos",
         "500ml leche entera",
@@ -450,7 +450,7 @@
       "idReceta": 21,
       "nombre": "Tarta de Santiago",
       "descripcion": "Tarta tradicional gallega de almendra con la cruz de Santiago característica.",
-      "imagen": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+      "imagen": "tarta-de-santiago.jpg",
       "ingredientes": [
         "250g almendra molida",
         "250g azúcar",
@@ -471,7 +471,7 @@
       "idReceta": 22,
       "nombre": "Sopa de Ajo",
       "descripcion": "Sopa castellana contundente con ajo, pan, pimentón y huevo escalfado.",
-      "imagen": "https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=800",
+      "imagen": "sopa_ajo.jpg",
       "ingredientes": [
         "6 dientes de ajo",
         "200g pan del día anterior",
@@ -514,7 +514,7 @@
       "idReceta": 24,
       "nombre": "Escalivada",
       "descripcion": "Verduras asadas al horno o brasa: berenjena y pimiento, plato catalán.",
-      "imagen": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800",
+      "imagen": "escalivada.jpg",
       "ingredientes": [
         "2 berenjenas",
         "3 pimientos rojos",
@@ -535,7 +535,7 @@
       "idReceta": 25,
       "nombre": "Pincho de Tortilla",
       "descripcion": "Mini pincho de tortilla sobre pan, clásico de los bares españoles.",
-      "imagen": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=800",
+      "imagen": "pincho-tortilla.jpeg",
       "ingredientes": [
         "4 huevos",
         "2 patatas medianas",
@@ -557,7 +557,7 @@
       "idReceta": 26,
       "nombre": "Bacalao al Pil-Pil",
       "descripcion": "Bacalao confitado en aceite y ajo con la característica salsa emulsionada vasca.",
-      "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800",
+      "imagen": "bacalao_pilpil.jpeg",
       "ingredientes": [
         "4 lomos de bacalao desalado",
         "300ml aceite de oliva",
@@ -577,7 +577,7 @@
       "idReceta": 27,
       "nombre": "Migas Manchegas",
       "descripcion": "Plato tradicional de La Mancha con pan desmigado, chorizo y pimientos.",
-      "imagen": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800",
+      "imagen": "spanish-cuisine-migas-manchegas.jpg",
       "ingredientes": [
         "500g pan del día anterior",
         "2 chorizos",
@@ -600,7 +600,7 @@
       "idReceta": 28,
       "nombre": "Buñuelos de Viento",
       "descripcion": "Buñuelos huecos y esponjosos rebozados en azúcar, dulce típico de festividades.",
-      "imagen": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800",
+      "imagen": "bunuelos-viento-scaled.jpg",
       "ingredientes": [
         "250ml agua",
         "100g mantequilla",
@@ -622,7 +622,7 @@
       "idReceta": 29,
       "nombre": "Ensaladilla Rusa",
       "descripcion": "Ensaladilla clásica con patata, zanahoria, atún y mayonesa casera.",
-      "imagen": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+      "imagen": "Ensaladilla-rusa-mama.jpg",
       "ingredientes": [
         "4 patatas",
         "2 zanahorias",
