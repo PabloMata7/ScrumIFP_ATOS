@@ -225,3 +225,49 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+function abrirModal() {
+    document.getElementById('modal-añadir').classList.remove('oculto');
+}
+
+function cerrarModal() {
+    document.getElementById('modal-añadir').classList.add('oculto');
+}
+
+function guardarReceta() {
+    const nombre = document.getElementById('input-nombre').value.trim();
+    const imagen = document.getElementById('input-imagen').value.trim();
+    const descripcion = document.getElementById('input-descripcion').value.trim();
+    const ingredientes = document.getElementById('input-ingredientes').value
+        .split('\n').filter(i => i.trim() !== '');
+    const pasos = document.getElementById('input-pasos').value
+        .split('\n').filter(p => p.trim() !== '');
+
+    if (!nombre || !descripcion || ingredientes.length === 0 || pasos.length === 0) {
+        alert('Rellena todos los campos obligatorios');
+        return;
+    }
+
+    const nuevaReceta = {
+        idReceta: Date.now(),
+        nombre,
+        imagen: imagen || '',
+        descripcion,
+        ingredientes,
+        pasos
+    };
+
+    // Guardar la receta en db
+    db.recetas.push(nuevaReceta);
+
+    // Añadir a favoritos del usuario actual
+    const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
+    favoritos.push({ idUsuario: USUARIO_ACTUAL.idUsuario, idReceta: nuevaReceta.idReceta });
+    localStorage.setItem('db_favoritos', JSON.stringify(favoritos));
+
+    // Volver a renderizar
+    obtenerRecetasFavoritas();
+    renderizarFavoritos();
+
+    cerrarModal();
+    mostrarNotificacion('Receta añadida a favoritos');
+}

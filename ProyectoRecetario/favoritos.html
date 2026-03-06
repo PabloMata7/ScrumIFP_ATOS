@@ -30,8 +30,26 @@
 
     <main>
         <div class="favoritos-header">
-            <h1>❤️ Mis Favoritos</h1>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+                <h1>❤️ Mis Favoritos</h1>
+                 <button class="btn-añadir" onclick="abrirModal()" style="margin-left: 50px;">+ Añadir receta</button>
+</div>
+            </div>
             <p class="favoritos-subtitulo">Aquí están todas las recetas que has guardado</p>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal-overlay oculto" id="modal-añadir">
+            <div class="modal-contenido">
+                <button class="btn-cerrar" onclick="cerrarModal()">✕</button>
+                <h2>Añadir receta</h2>
+                <input type="text" id="input-nombre" placeholder="Nombre de la receta" />
+                <input type="text" id="input-imagen" placeholder="URL de la imagen" />
+                <textarea id="input-descripcion" placeholder="Descripción"></textarea>
+                <textarea id="input-ingredientes" placeholder="Ingredientes (uno por línea)"></textarea>
+                <textarea id="input-pasos" placeholder="Pasos (uno por línea)"></textarea>
+                <button class="btn-guardar" onclick="guardarReceta()">Guardar receta</button>
+            </div>
         </div>
 
         <div id="sin-favoritos" class="sin-favoritos-container" style="display: none;">
