@@ -13,24 +13,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar información del usuario
     mostrarInfoUsuario();
 
-    // Cargar datos
-    fetch("recetas.json")
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            db = datos;
+ fetch("recetas.json")
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        // Combinar recetas del JSON con las guardadas en localStorage
+        const recetasLocales = JSON.parse(localStorage.getItem('misRecetas') || '[]');
+        db = datos;
+        db.recetas = [...datos.recetas, ...recetasLocales];
 
-            if (!localStorage.getItem('db_favoritos')) {
-                localStorage.setItem('db_favoritos', JSON.stringify(datos.favoritos));
-            }
+        if (!localStorage.getItem('db_favoritos')) {
+            localStorage.setItem('db_favoritos', JSON.stringify(datos.favoritos));
+        }
 
-            // Obtener y renderizar favoritos del usuario actual
-            obtenerRecetasFavoritas();
-            renderizarFavoritos();
-        })
-        .catch(error => {
-            console.error("Error al cargar las recetas:", error);
-            mostrarError("No se pudieron cargar las recetas. Intenta más tarde.");
-        });
+        obtenerRecetasFavoritas();
+        renderizarFavoritos();
+    })
+    .catch(error => {
+        console.error("Error al cargar las recetas:", error);
+        mostrarError("No se pudieron cargar las recetas. Intenta más tarde.");
+    });
 });
 
 /**
@@ -258,6 +259,11 @@ function guardarReceta() {
 
     // Guardar la receta en db
     db.recetas.push(nuevaReceta);
+
+    // Guardar la receta también en localStorage
+const recetasGuardadas = JSON.parse(localStorage.getItem('misRecetas') || '[]');
+recetasGuardadas.push(nuevaReceta);
+localStorage.setItem('misRecetas', JSON.stringify(recetasGuardadas));
 
     // Añadir a favoritos del usuario actual
     const favoritos = JSON.parse(localStorage.getItem('db_favoritos')) || [];
