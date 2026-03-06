@@ -577,7 +577,7 @@
       "idReceta": 27,
       "nombre": "Migas Manchegas",
       "descripcion": "Plato tradicional de La Mancha con pan desmigado, chorizo y pimientos.",
-      "imagen": "spanish-cuisine-migas-manchegas",
+      "imagen": "spanish-cuisine-migas-manchegas.jpg",
       "ingredientes": [
         "500g pan del día anterior",
         "2 chorizos",
@@ -600,7 +600,7 @@
       "idReceta": 28,
       "nombre": "Buñuelos de Viento",
       "descripcion": "Buñuelos huecos y esponjosos rebozados en azúcar, dulce típico de festividades.",
-      "imagen": "bunuelos-viento-scaled",
+      "imagen": "bunuelos-viento-scaled.jpg",
       "ingredientes": [
         "250ml agua",
         "100g mantequilla",
@@ -622,7 +622,7 @@
       "idReceta": 29,
       "nombre": "Ensaladilla Rusa",
       "descripcion": "Ensaladilla clásica con patata, zanahoria, atún y mayonesa casera.",
-      "imagen": "Ensaladilla-rusa-mama",
+      "imagen": "Ensaladilla-rusa-mama.jpg",
       "ingredientes": [
         "4 patatas",
         "2 zanahorias",
