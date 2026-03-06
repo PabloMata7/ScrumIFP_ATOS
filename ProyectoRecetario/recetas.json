@@ -192,7 +192,7 @@
       "idReceta": 9,
       "nombre": "Salmorejo Cordobés",
       "descripcion": "Crema fría de tomate espesa, más densa que el gazpacho, típica de Córdoba.",
-      "imagen": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800",
+      "imagen": "Qué-crema-de-verduras-es-la-más-saludable.webp",
       "ingredientes": [
         "1 kg tomates maduros",
         "200g pan duro",
@@ -258,7 +258,7 @@
       "idReceta": 12,
       "nombre": "Pisto Manchego",
       "descripcion": "Fritada de verduras de La Mancha, similar al ratatouille francés.",
-      "imagen": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+      "imagen": "pisto-manchego-receta-tradicional-de-la-abuela.jpg",
       "ingredientes": [
         "2 calabacines",
         "2 pimientos rojos",
@@ -280,7 +280,7 @@
       "idReceta": 13,
       "nombre": "Fabada Asturiana",
       "descripcion": "Guiso contundente de fabes con compango asturiano, plato emblemático del norte.",
-      "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800",
+      "imagen": "fabada_asturiana.jpeg",
       "ingredientes": [
         "500g fabes asturianas",
         "2 chorizos asturianos",
@@ -302,7 +302,7 @@
       "idReceta": 14,
       "nombre": "Churros con Chocolate",
       "descripcion": "Churros crujientes fritos acompañados de chocolate espeso para mojar.",
-      "imagen": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800",
+      "imagen": "churros_chocolate.webp",
       "ingredientes": [
         "250g harina",
         "250ml agua hirviendo",
@@ -322,7 +322,7 @@
       "idReceta": 15,
       "nombre": "Pollo al Ajillo",
       "descripcion": "Pollo dorado con ajo, vino blanco y hierbas aromáticas, receta tradicional.",
-      "imagen": "https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=800",
+      "imagen": "pollo_al_ajillo.jpg",
       "ingredientes": [
         "1 pollo troceado",
         "8 dientes de ajo",
