@@ -128,7 +128,7 @@
       "idReceta": 6,
       "nombre": "Patatas Bravas",
       "descripcion": "Patatas fritas crujientes con salsa brava picante, tapa clásica española.",
-      "imagen": "https://images.unsplash.com/photo-1598679253544-2c97992403ea?w=800",
+      "imagen": "patatasbravas.jpg",
       "ingredientes": [
         "4 patatas grandes",
         "Aceite de oliva",
@@ -147,7 +147,7 @@
       "idReceta": 7,
       "nombre": "Pulpo a la Gallega",
       "descripcion": "Pulpo cocido con pimentón, aceite de oliva y sal gruesa sobre patatas.",
-      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "imagen": "pulpogallega.jpg",
       "ingredientes": [
         "1 pulpo de 1,5 kg",
         "3 patatas medianas",
@@ -167,7 +167,7 @@
       "idReceta": 8,
       "nombre": "Cocido Madrileño",
       "descripcion": "Guiso tradicional de garbanzos con carnes y verduras de Madrid.",
-      "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800",
+      "imagen": "cocidomadrileño.jpg",
       "ingredientes": [
         "400g garbanzos",
         "1 trozo de tocino",
@@ -192,7 +192,7 @@
       "idReceta": 9,
       "nombre": "Salmorejo Cordobés",
       "descripcion": "Crema fría de tomate espesa, más densa que el gazpacho, típica de Córdoba.",
-      "imagen": "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800",
+      "imagen": "salmorejocordobes.jpg",
       "ingredientes": [
         "1 kg tomates maduros",
         "200g pan duro",
@@ -213,7 +213,7 @@
       "idReceta": 10,
       "nombre": "Gambas al Ajillo",
       "descripcion": "Gambas salteadas con ajo y guindilla en aceite de oliva, tapa imprescindible.",
-      "imagen": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800",
+      "imagen": "gambasalajillo.jpg",
       "ingredientes": [
         "400g gambas peladas",
         "6 dientes de ajo",
@@ -234,7 +234,7 @@
       "idReceta": 11,
       "nombre": "Lentejas Estofadas",
       "descripcion": "Lentejas guisadas con chorizo, verduras y especias al estilo tradicional.",
-      "imagen": "https://images.unsplash.com/photo-1547592180-85f173990554?w=800",
+      "imagen": "lentejas.jpg",
       "ingredientes": [
         "400g lentejas pardinas",
         "1 chorizo",
