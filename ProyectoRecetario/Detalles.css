@@ -75,6 +75,24 @@ nav a:hover {
     cursor: pointer;
 }
 
+header a[href="login.html"] {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: var(--accent);
+    padding: 9px 20px;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+header a[href="login.html"]:hover {
+    background-color: #a8401e;
+    transform: translateY(-1px);
+}
+
 main {
     flex: 1;
     max-width: 960px;

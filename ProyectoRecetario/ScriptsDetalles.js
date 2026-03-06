@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Obtener el ID de la receta de la URL
     const params = new URLSearchParams(window.location.search);
     const idReceta = params.get('id');
@@ -21,8 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Rellenar título y descripción
             document.getElementById('titulo').textContent = receta.nombre;
-            document.getElementById('receta-img').src = receta.imagen;  // Asigna la URL del JSON
-            document.getElementById('receta-img').alt = receta.nombre;  // Asigna el nombre como descripción
+            const imgEl = document.getElementById('receta-img');
+            const placeholder = document.getElementById('img-placeholder');
+            const src = receta.imagen.startsWith('http') ? receta.imagen : 'recursos/' + receta.imagen;
+            imgEl.src = src;
+            imgEl.alt = receta.nombre;
+            imgEl.onload = function () {
+                imgEl.style.display = 'block';
+                if (placeholder) placeholder.style.display = 'none';
+            };
+            imgEl.onerror = function () {
+                imgEl.style.display = 'none';
+                if (placeholder) placeholder.style.display = 'flex';
+            };
             document.getElementById('descripcion').textContent = receta.descripcion;
 
             // Rellenar ingredientes
